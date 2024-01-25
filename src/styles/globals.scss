@@ -1,0 +1,39 @@
+@import "reset";
+@import "variables";
+
+body {
+  background-color: $bgVioletDark;
+  color: $white;
+}
+
+// ***Scroll Bar***
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #12192d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $violet;
+  border-radius: 0.4rem;
+}
+
+//***App Container***
+
+.container {
+  position: relative;
+}
+
+// ***MAIN***
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+// ***ERROR Page***
