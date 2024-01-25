@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Footer from "@/components/footer/Footer";
 import "../styles/globals.scss";
 
 const poppins = Poppins({
@@ -27,7 +28,7 @@ export default function RootLayout({
         <div className="container">
           <header></header>
           <main className="main">{children}</main>
-          <footer></footer>
+          <Footer />
         </div>
       </body>
     </html>
