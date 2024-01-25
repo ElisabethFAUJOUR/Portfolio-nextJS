@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import "../styles/globals.scss";
 
@@ -26,7 +27,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${poppins.className} antialiased`}>
         <div className="container">
-          <header></header>
+          <Header />
           <main className="main">{children}</main>
           <Footer />
         </div>
