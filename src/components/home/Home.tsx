@@ -52,7 +52,7 @@ function Home() {
             </div>
             <a
               className={styles.resume}
-              href="/assets/docs/Elisabeth_FAUJOUR_CV.pdf"
+              href="/docs/Elisabeth_FAUJOUR_CV.pdf"
               download="Elisabeth_FAUJOUR_CV.pdf"
             >
               <Download size={16} /> Mon CV

@@ -13,9 +13,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Portfolio - Elisabeth FAUJOUR - Développeuse Web Front-End',
   description:
-    'Portfolio de Elisabeth FAUJOUR, développeuse Web Front-end, et réalisé avec amour en HTML/CSS/Javascript.',
+    'Portfolio de Elisabeth FAUJOUR, développeuse Web Front-end, et réalisé avec amour avec NextJS.',
   keywords:
-    'Elisabeth FAUJOUR, Portfolio, Développeuse, Développeur, Développeur Web, NextJS, Web, reconversion ',
+    'Elisabeth FAUJOUR, Portfolio, Développeuse, Développeur, Développeur Web, Front-End, Javascript, NextJS, Web, Reconversion, React, UX/UI, HTML, CSS, SCSS, Typescript.',
+  metadataBase: new URL('https://elisaebthfaujour-portfolio.vercel.app/'),
 };
 
 export default function RootLayout({
