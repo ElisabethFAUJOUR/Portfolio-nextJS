@@ -1,16 +1,7 @@
-import Image from "next/image";
-import styles from "./Header.module.scss";
-import { List } from "react-bootstrap-icons";
-import { Link } from "react-bootstrap-icons";
-
-const links = [
-  { name: "Home", href: "#home" },
-  { name: "A propos", href: "#about" },
-  { name: "Mon parcours", href: "#career" },
-  { name: "Compétences", href: "#skills" },
-  { name: "Projets", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-];
+import { navLinks } from '@/data/data';
+import Image from 'next/image';
+import styles from './Header.module.scss';
+import { List } from 'react-bootstrap-icons';
 
 function Header() {
   return (
@@ -29,7 +20,7 @@ function Header() {
         />
       </a>
       <nav className={styles.navbar}>
-        {links.map((link) => {
+        {navLinks.map((link) => {
           return (
             <a key={link.name} href={link.href} className={styles.link}>
               {link.name}

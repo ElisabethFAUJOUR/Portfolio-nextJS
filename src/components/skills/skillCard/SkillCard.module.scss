@@ -1,0 +1,23 @@
+@import 'variables';
+
+.card {
+  padding: 1.5rem 1rem;
+  color: $violetLight;
+  background-color: $violetContact;
+  border-radius: 0.4rem;
+  .subtitle {
+    padding-bottom: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    color: $violetLight;
+    font-weight: 300;
+    list-style-type: none;
+  }
+}
