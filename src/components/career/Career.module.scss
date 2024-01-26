@@ -1,0 +1,108 @@
+@import 'variables';
+
+.timeline {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 50%;
+    width: 0.15rem;
+    background: $white;
+    border-radius: 0.4rem;
+  }
+
+  .container {
+    position: relative;
+    width: calc(50% - 60px);
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background: linear-gradient($bgGradiantDark, $bgGradiantLight);
+    border-radius: 0.5rem;
+    border-bottom: 1px solid $violetLight;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 100%;
+      width: 0;
+      height: 0;
+      border-top: 0 solid transparent;
+      border-left: 14px solid $bgGradiantLight;
+      border-bottom: 15px solid transparent;
+    }
+    &:nth-child(even) {
+      margin-left: calc(50% + 60px);
+    }
+    &:nth-child(even):before {
+      left: auto;
+      right: calc(100% + 35px);
+    }
+    &:nth-child(even):after {
+      left: auto;
+      right: 100%;
+      border-left: none;
+      border-right: 16px solid $bgGradiantLight;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -4px;
+      width: 2rem;
+      height: 2rem;
+      background-color: $white;
+      border-radius: 50%;
+    }
+    .left {
+      left: calc(100% + 45px);
+    }
+    .right {
+      right: calc(100% + 43px);
+    }
+
+    .block {
+      .title {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+      .date {
+        display: flex;
+        gap: 0.5rem;
+        font-weight: 500;
+        padding-bottom: 2rem;
+        color: $violet;
+      }
+      .subtitle,
+      .title {
+        font-weight: 400;
+        padding-bottom: 1rem;
+        line-height: 1.5;
+      }
+      .list {
+        color: $violetLight;
+        padding: 0 1rem;
+        font-weight: 300;
+        padding-bottom: 1rem;
+        .elem {
+          list-style-type: disc;
+          line-height: 1.8;
+          padding-bottom: 0.5rem;
+        }
+      }
+      .location {
+        display: flex;
+        gap: 0.5rem;
+        font-style: italic;
+        padding-bottom: 1rem;
+        color: $violetLight;
+      }
+    }
+  }
+}
