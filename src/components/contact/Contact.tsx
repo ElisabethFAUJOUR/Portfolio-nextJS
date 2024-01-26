@@ -15,6 +15,7 @@ function Contact() {
               Nom
             </label>
             <input
+              className={styles.input}
               type="text"
               name="lastname"
               placeholder="Nom"
@@ -25,6 +26,7 @@ function Contact() {
               Prénom
             </label>
             <input
+              className={styles.input}
               type="text"
               name="firstname"
               placeholder="Prénom"
@@ -35,6 +37,7 @@ function Contact() {
               Email
             </label>
             <input
+              className={styles.input}
               type="email"
               name="email"
               placeholder="Email"
@@ -45,6 +48,7 @@ function Contact() {
               Téléphone (facultatif)
             </label>
             <input
+              className={styles.input}
               type="tel"
               name="phone"
               placeholder="Téléphone (facultatif)"
@@ -57,6 +61,7 @@ function Contact() {
               Message
             </label>
             <textarea
+              className={styles.textarea}
               name="message"
               placeholder="Ecrivez votre message"
               id="message"
@@ -64,8 +69,10 @@ function Contact() {
             ></textarea>
           </div>
         </div>
-        <div className={styles.button}>
-          <button type="submit">Envoyer</button>
+        <div>
+          <button className={styles.button} type="submit">
+            Envoyer
+          </button>
         </div>
       </form>
     </section>

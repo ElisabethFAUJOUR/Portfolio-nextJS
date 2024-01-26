@@ -3,6 +3,7 @@ import About from '@/components/about/About';
 import Career from '@/components/career/Career';
 import Skills from '@/components/skills/Skills';
 import Projects from '@/components/projects/Projects';
+import Contact from '@/components/contact/Contact';
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <Career />
       <Skills />
       <Projects />
+      <Contact />
     </>
   );
 }
