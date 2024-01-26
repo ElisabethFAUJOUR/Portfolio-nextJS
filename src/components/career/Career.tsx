@@ -1,3 +1,5 @@
+import FadeInDiv from '../animations/FadeInDiv/FadeInDiv';
+import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import { BriefcaseFill } from 'react-bootstrap-icons';
 import { Calendar3 } from 'react-bootstrap-icons';
 import { BuildingFill } from 'react-bootstrap-icons';
@@ -6,10 +8,10 @@ import styles from './Career.module.scss';
 
 function Career() {
   return (
-    <section className={`${styles.career} main-layout`} id="career">
+    <FadeInSection customClass={`${styles.career} main-layout`} id="career">
       <h2 className={`${styles.title} main-title fade-in`}>Mon parcours.</h2>
       <div className={styles.timeline}>
-        <article className={`${styles.container} fade-in`}>
+        <FadeInDiv customClass={styles.container}>
           <div className={`${styles.icon} ${styles.left}`}>
             <BriefcaseFill size={20} color="#0f0b25" />
           </div>
@@ -43,9 +45,9 @@ function Career() {
               numérique)
             </p>
           </div>
-        </article>
+        </FadeInDiv>
 
-        <article className={`${styles.container} fade-in`}>
+        <FadeInDiv customClass={styles.container}>
           <div className={`${styles.icon} ${styles.right}`}>
             <MortarboardFill size={20} color="#0f0b25" />
           </div>
@@ -69,9 +71,9 @@ function Career() {
               numérique)
             </p>
           </div>
-        </article>
+        </FadeInDiv>
 
-        <article className={`${styles.container} fade-in`}>
+        <FadeInDiv customClass={styles.container}>
           <div className={`${styles.icon} ${styles.left}`}>
             <BriefcaseFill size={20} color="#0f0b25" />
           </div>
@@ -102,9 +104,9 @@ function Career() {
               </li>
             </ul>
           </div>
-        </article>
+        </FadeInDiv>
 
-        <article className={`${styles.container} fade-in`}>
+        <FadeInDiv customClass={styles.container}>
           <div className={`${styles.icon} ${styles.right}`}>
             <MortarboardFill size={20} color="#0f0b25" />
           </div>
@@ -119,9 +121,9 @@ function Career() {
               <BuildingFill /> Ecole de kinésithérapie du CHU de Grenoble
             </p>
           </div>
-        </article>
+        </FadeInDiv>
 
-        <article className={`${styles.container} fade-in`}>
+        <FadeInDiv customClass={styles.container}>
           <div className={`${styles.icon} ${styles.left}`}>
             <MortarboardFill size={20} color="#0f0b25" />
           </div>
@@ -136,9 +138,9 @@ function Career() {
               <BuildingFill /> Université Grenobles Alpes - UFR Médecine
             </p>
           </div>
-        </article>
+        </FadeInDiv>
       </div>
-    </section>
+    </FadeInSection>
   );
 }
 

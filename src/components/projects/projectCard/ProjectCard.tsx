@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { nanoid } from 'nanoid';
+import FadeInDiv from '@/components/animations/FadeInDiv/FadeInDiv';
 import styles from './ProjectCard.module.scss';
 
 interface Tag {}
@@ -26,7 +27,7 @@ function ProjectCard({
       target="_blank"
       rel="noopener noreferrer nofollow"
     >
-      <article className={styles.card}>
+      <FadeInDiv customClass={styles.card}>
         <Image
           className={styles.img}
           src={imageSrc}
@@ -50,7 +51,7 @@ function ProjectCard({
             Voir plus
           </button>
         </div>
-      </article>
+      </FadeInDiv>
     </a>
   );
 }

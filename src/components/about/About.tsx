@@ -1,11 +1,12 @@
+import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import Image from 'next/image';
 import styles from './About.module.scss';
 
 function About() {
   return (
-    <section className={`${styles.about} main-layout fade-in`} id="about">
-      <h2 className={`${styles.title} main-title fade-in`}>A propos.</h2>
-      <div className={`${styles.container} fade-in`}>
+    <FadeInSection customClass={`${styles.about} main-layout`} id="about">
+      <h2 className={`${styles.title} main-title`}>A propos.</h2>
+      <div className={styles.container}>
         <article className={styles.article}>
           <div className={styles.text}>
             <p className={styles.quote}>
@@ -48,7 +49,7 @@ function About() {
           />
         </div>
       </div>
-    </section>
+    </FadeInSection>
   );
 }
 

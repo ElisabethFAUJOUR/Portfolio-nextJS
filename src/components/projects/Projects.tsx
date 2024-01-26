@@ -1,10 +1,11 @@
+import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import { projects } from '@/data/data';
 import ProjectCard from './projectCard/ProjectCard';
 import styles from './Projects.module.scss';
 
 function Projects() {
   return (
-    <section className={`${styles.projects} main-layout`} id="projects">
+    <FadeInSection customClass={`${styles.projects} main-layout`} id="projects">
       <h2 className={`${styles.title} main-title fade-in`}>Projets.</h2>
       <div className={styles.container}>
         {projects.map((project) => (
@@ -18,7 +19,7 @@ function Projects() {
           />
         ))}
       </div>
-    </section>
+    </FadeInSection>
   );
 }
 

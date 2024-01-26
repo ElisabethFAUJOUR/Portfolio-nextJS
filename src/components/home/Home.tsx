@@ -1,3 +1,4 @@
+import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import AnimeCat from './animeCat/AnimeCat';
 import { ChevronDoubleDown, Link } from 'react-bootstrap-icons';
 import { Github } from 'react-bootstrap-icons';
@@ -8,7 +9,7 @@ import styles from './Home.module.scss';
 
 function Home() {
   return (
-    <section className={`${styles.home} fade-in`} id="home">
+    <FadeInSection customClass={styles.home} id="home">
       <div className={styles.arrow}>
         <a
           className={styles.link}
@@ -61,7 +62,7 @@ function Home() {
         </div>
         <AnimeCat />
       </div>
-    </section>
+    </FadeInSection>
   );
 }
 

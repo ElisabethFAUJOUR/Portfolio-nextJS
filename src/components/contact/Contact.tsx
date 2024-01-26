@@ -1,8 +1,9 @@
+import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import styles from './Contact.module.scss';
 
 function Contact() {
   return (
-    <section className={`${styles.contact} main-layout`} id="contact">
+    <FadeInSection customClass={`${styles.contact} main-layout`} id="contact">
       <h2 className={`${styles.title} main-title fade-in`}>Me contacter.</h2>
       <form
         className={`${styles.form} fade-in`}
@@ -75,7 +76,7 @@ function Contact() {
           </button>
         </div>
       </form>
-    </section>
+    </FadeInSection>
   );
 }
 

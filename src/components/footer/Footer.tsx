@@ -1,13 +1,15 @@
 import Link from 'next/link';
-import styles from './Footer.module.scss';
+import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import { Github } from 'react-bootstrap-icons';
 import { Linkedin } from 'react-bootstrap-icons';
 import { EnvelopeFill } from 'react-bootstrap-icons';
+import styles from './Footer.module.scss';
+import FadeInDiv from '../animations/FadeInDiv/FadeInDiv';
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={`${styles.socials} fade-in`}>
+      <FadeInDiv customClass={styles.socials}>
         <a
           className={styles.link}
           href="https://github.com/ElisabethFAUJOUR"
@@ -34,7 +36,7 @@ function Footer() {
         >
           <EnvelopeFill />
         </a>
-      </div>
+      </FadeInDiv>
       <p className={styles.text}>
         © 2023 Elisabeth FAUJOUR - Tous droits réservés.
       </p>

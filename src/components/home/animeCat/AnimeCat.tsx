@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './AnimeCat.module.scss';
 
 function AnimeCat() {
