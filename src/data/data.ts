@@ -80,11 +80,26 @@ export const skillsSections = [
 
 export const projects = [
   {
-    title: "O'Journey",
-    description: "Application d'organisation de voyage interactive.",
+    title: `O'Journey`,
+    description: `Application d'organisation de voyage interactive.`,
     link: 'https://o-journey.vercel.app/',
     imageSrc: '/images/ojourney.webp',
-    tags: ['React', 'Redux', 'Typescript', 'NodeJS', 'Express', 'postgreSQL'],
+    tags: [
+      'React',
+      'Redux',
+      'Typescript',
+      'NodeJS',
+      'Express',
+      'postgreSQL',
+      'API REST',
+    ],
+  },
+  {
+    title: 'Elden Ring Bosses',
+    description: `Projet personnel NextJS avec l'API open source Elden Ring.`,
+    link: 'https://github.com/ElisabethFjr/elden-ring-bosses',
+    imageSrc: '/images/eldenring.webp',
+    tags: ['NextJS', 'Javascript', 'Typescript', 'SCSS', 'API'],
   },
   {
     title: 'Ghibliotheque',
