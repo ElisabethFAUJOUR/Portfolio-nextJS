@@ -8,7 +8,7 @@ import styles from './Home.module.scss';
 
 function Home() {
   return (
-    <div className={`${styles.home} fade-in`} id="home">
+    <section className={`${styles.home} fade-in`} id="home">
       <div className={styles.arrow}>
         <a
           className={styles.link}
@@ -61,7 +61,7 @@ function Home() {
         </div>
         <AnimeCat />
       </div>
-    </div>
+    </section>
   );
 }
 

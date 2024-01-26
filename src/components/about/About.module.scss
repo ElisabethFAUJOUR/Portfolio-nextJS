@@ -1,0 +1,36 @@
+@import 'variables';
+
+.about {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .article {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      color: $violetLight;
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        line-height: 1.8;
+        font-weight: 300;
+        .quote {
+          font-style: italic;
+          font-family: serif;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .img {
+      border-radius: 50%;
+      width: 400px;
+      height: auto;
+      margin-left: 5%;
+    }
+  }
+  .bold {
+    font-weight: 600;
+  }
+}
