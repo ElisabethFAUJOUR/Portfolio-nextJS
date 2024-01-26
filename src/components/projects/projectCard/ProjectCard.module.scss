@@ -1,0 +1,96 @@
+@import 'variables';
+
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 420px;
+  background: linear-gradient($bgGradiantDark, $bgGradiantLight);
+  border-radius: 0.5rem;
+  border-bottom: 1px solid $violetLight;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+    &:hover .button {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  .img {
+    width: 100%;
+    max-height: 175px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding: 1.5rem;
+    .title {
+      padding-bottom: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .description {
+      padding-bottom: 1.5rem;
+      color: $violetLight;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.5;
+      list-style-type: square;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-bottom: 1rem;
+      font-weight: 300;
+      font-size: 0.8rem;
+      line-height: 2;
+      .elem {
+        background-color: $violetContact;
+        border-radius: 0.4rem;
+        padding: 0.2rem 0.6rem;
+      }
+    }
+  }
+  .overlay {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 7, 20, 0.5);
+    backdrop-filter: blur(8px);
+    transition: all 0.5s ease-in-out;
+    .button {
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      width: fit-content;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      background: linear-gradient(45deg, $blue, $violet 30%, $violetPink);
+      border-radius: 3rem;
+      color: $violetLight;
+      text-align: center;
+      text-transform: uppercase;
+      transform: translateY(40px);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}

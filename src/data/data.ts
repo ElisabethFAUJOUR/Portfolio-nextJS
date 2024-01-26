@@ -77,3 +77,27 @@ export const skillsSections = [
     ],
   },
 ];
+
+export const projects = [
+  {
+    title: "O'Journey",
+    description: "Application d'organisation de voyage interactive.",
+    link: 'https://o-journey.vercel.app/',
+    imageSrc: '/images/ojourney.webp',
+    tags: ['React', 'Redux', 'Typescript', 'NodeJS', 'Express', 'postgreSQL'],
+  },
+  {
+    title: 'Ghibliotheque',
+    description: 'Projet personnel sur les films du studio Ghibli.',
+    link: 'https://github.com/ElisabethFjr/Ghibliotheque',
+    imageSrc: '/images/ghibliotheque.webp',
+    tags: ['VanillaJS', 'EJS', 'NodeJS', 'Express', 'postgreSQL'],
+  },
+  {
+    title: 'Hunt Showdown Arsenal',
+    description: 'Projet personnel sur le jeu vidéo Hunt Showdown (Crytek).',
+    link: 'https://github.com/ElisabethFjr/Hunt-Showdown-Arsenal',
+    imageSrc: '/images/hunt.webp',
+    tags: ['VanillaJS', 'EJS', 'NodeJS', 'Express', 'postgreSQL'],
+  },
+];
