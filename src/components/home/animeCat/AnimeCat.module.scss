@@ -1,0 +1,128 @@
+@import 'variables';
+@import 'animation';
+
+.cat {
+  width: 880px;
+  height: auto;
+
+  /***TABLE***/
+  .table {
+    fill: none;
+    stroke: $violetLight;
+  }
+
+  /***LAPTOP***/
+  .base {
+    fill: none;
+    fill-opacity: 1;
+    stroke: $violet;
+  }
+  .keyboard {
+    fill: none;
+    fill-opacity: 1;
+    stroke: $blue;
+  }
+  .screen {
+    fill: $bgVioletDark;
+    fill-opacity: 1;
+    stroke: $blue;
+  }
+  .cover {
+    fill: none;
+    fill-opacity: 1;
+    stroke: $violet;
+  }
+
+  /*Screen animation*/
+  .code {
+    fill: none;
+    fill-opacity: 1;
+    stroke: $violetLight;
+    stroke-width: 1;
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+    opacity: 0;
+    transition: none;
+  }
+  .code.displayed {
+    opacity: 1;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s ease-in-out;
+  }
+
+  /***CAT***/
+  .cat.static {
+    .face {
+      display: inline;
+      fill: $pinkLight;
+      fill-opacity: 1;
+      stroke-width: 0.396948;
+    }
+    .tail {
+      fill: none;
+      fill-opacity: 1;
+      stroke: $violetLight;
+    }
+    .body {
+      fill: none;
+      fill-opacity: 1;
+      stroke: $violetLight;
+    }
+    .ears {
+      fill: none;
+      fill-opacity: 1;
+      stroke: $pink;
+    }
+    .mustache {
+      fill: none;
+      fill-opacity: 1;
+      stroke: $pink;
+    }
+  }
+
+  .cat.animation {
+    .pawr {
+      fill: $bgVioletDark;
+      fill-opacity: 1;
+      stroke: $violetLight;
+      stroke-opacity: 1;
+    }
+    .pawrup {
+      fill: $bgVioletDark;
+      fill-opacity: 1;
+      stroke: $violetLight;
+      stroke-opacity: 1;
+    }
+    .pawl {
+      fill: $bgVioletDark;
+      fill-opacity: 1;
+      stroke: $violetLight;
+      stroke-opacity: 1;
+    }
+    .pawlup {
+      fill: $bgVioletDark;
+      fill-opacity: 1;
+      stroke: $violetLight;
+      stroke-opacity: 1;
+    }
+    .pad {
+      stroke: $pink;
+    }
+  }
+
+  /*Paw animation*/
+  .pawr {
+    animation: catPawAnimation 0.4s infinite;
+  }
+  .pawl {
+    animation: catPawAnimation 0.4s infinite;
+    animation-delay: 0.1s;
+  }
+  .pawrup {
+    animation: catPawUpAnimation 0.4s infinite;
+  }
+  .pawlup {
+    animation: catPawUpAnimation 0.4s infinite;
+    animation-delay: 0.1s;
+  }
+}

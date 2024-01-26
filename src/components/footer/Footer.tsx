@@ -1,8 +1,8 @@
-import Link from "next/link";
-import styles from "./Footer.module.scss";
-import { Github } from "react-bootstrap-icons";
-import { Linkedin } from "react-bootstrap-icons";
-import { EnvelopeFill } from "react-bootstrap-icons";
+import Link from 'next/link';
+import styles from './Footer.module.scss';
+import { Github } from 'react-bootstrap-icons';
+import { Linkedin } from 'react-bootstrap-icons';
+import { EnvelopeFill } from 'react-bootstrap-icons';
 
 function Footer() {
   return (

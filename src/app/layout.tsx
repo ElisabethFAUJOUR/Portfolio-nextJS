@@ -1,21 +1,22 @@
-import React from "react";
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
-import "../styles/globals.scss";
+import React from 'react';
+import type { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
+import Footer from '@/components/footer/Footer';
+import Header from '@/components/header/Header';
+import '../styles/globals.scss';
+import Home from '@/components/home/Home';
 
 const poppins = Poppins({
-  subsets: ["latin"],
-  weight: "400",
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Elisabeth FAUJOUR - Développeuse Web Front-End",
+  title: 'Portfolio - Elisabeth FAUJOUR - Développeuse Web Front-End',
   description:
-    "Portfolio de Elisabeth FAUJOUR, développeuse Web Front-end, et réalisé avec amour en HTML/CSS/Javascript.",
+    'Portfolio de Elisabeth FAUJOUR, développeuse Web Front-end, et réalisé avec amour en HTML/CSS/Javascript.',
   keywords:
-    "Elisabeth FAUJOUR, Portfolio, Développeuse, Développeur, Développeur Web, NextJS, Web, reconversion ",
+    'Elisabeth FAUJOUR, Portfolio, Développeuse, Développeur, Développeur Web, NextJS, Web, reconversion ',
 };
 
 export default function RootLayout({
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body className={`${poppins.className} antialiased`}>
         <div className="container">
           <Header />
-          <main className="main">{children}</main>
+          <main className="main">
+            <Home />
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

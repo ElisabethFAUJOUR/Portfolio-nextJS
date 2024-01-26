@@ -1,0 +1,95 @@
+@import 'variables';
+@import 'animation';
+
+.home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .arrow {
+    position: fixed;
+    z-index: 1;
+    bottom: 2rem;
+    left: 50%;
+    color: $violetLight;
+    font-size: 2rem;
+    animation: glow 2s infinite;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6%;
+    position: relative;
+    max-width: 1600px;
+    width: 90%;
+    height: 100vh;
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+
+      .socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+
+        .link {
+          font-size: 1.3rem;
+          border: 1.6px solid $white;
+          border-radius: 50%;
+          padding: 0.8rem;
+          text-align: center;
+          line-height: auto;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $violet;
+            border: 1.6px solid $violet;
+          }
+        }
+      }
+
+      .infos {
+        width: 400px;
+
+        .name {
+          padding-bottom: 0.6rem;
+          font-size: 2.5rem;
+          font-weight: 600;
+        }
+        .job {
+          padding-bottom: 1.6rem;
+          font-size: 1.4rem;
+          font-weight: 300;
+        }
+        .resume {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          width: fit-content;
+          padding: 0.8rem 2rem;
+          margin-top: 1.5rem;
+          background: linear-gradient(45deg, $blue, $violet 30%, $violetPink);
+          border-radius: 3rem;
+          color: $violetLight;
+          text-align: center;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
