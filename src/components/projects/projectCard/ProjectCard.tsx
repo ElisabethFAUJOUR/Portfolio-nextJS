@@ -20,7 +20,12 @@ function ProjectCard({
   tags,
 }: ProjectCardProps) {
   return (
-    <a className={`${styles.link} fade-in`} href={link} target="_blank">
+    <a
+      className={`${styles.link} fade-in`}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+    >
       <article className={styles.card}>
         <Image
           className={styles.img}

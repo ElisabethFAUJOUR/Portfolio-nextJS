@@ -22,7 +22,12 @@ function Header() {
       <nav className={styles.navbar}>
         {navLinks.map((link) => {
           return (
-            <a key={link.name} href={link.href} className={styles.link}>
+            <a
+              key={link.name}
+              href={link.href}
+              className={styles.link}
+              rel="noopener noreferrer nofollow"
+            >
               {link.name}
             </a>
           );

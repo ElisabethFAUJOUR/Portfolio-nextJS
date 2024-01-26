@@ -12,7 +12,7 @@ function Footer() {
           className={styles.link}
           href="https://github.com/ElisabethFAUJOUR"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           aria-label="Profil GitHub de Elisabeth Faujour"
         >
           <Github />
@@ -21,7 +21,7 @@ function Footer() {
           className={styles.link}
           href="https://www.linkedin.com/in/elisabeth-faujour/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           aria-label="Profil LinkedIn de Elisabeth Faujour"
         >
           <Linkedin />
@@ -29,7 +29,7 @@ function Footer() {
         <a
           className={styles.link}
           href="mailto:efaujour@gmail.com"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           aria-label="Envoyer un e-mail à Elisabeth Faujour"
         >
           <EnvelopeFill />
