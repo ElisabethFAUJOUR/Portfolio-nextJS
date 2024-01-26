@@ -1,4 +1,5 @@
 import { navLinks } from '@/data/data';
+import NavBar from './NavBar/NavBar';
 import Image from 'next/image';
 import styles from './Header.module.scss';
 import { List } from 'react-bootstrap-icons';
@@ -19,20 +20,7 @@ function Header() {
           height={24.48}
         />
       </a>
-      <nav className={styles.navbar}>
-        {navLinks.map((link) => {
-          return (
-            <a
-              key={link.name}
-              href={link.href}
-              className={styles.link}
-              rel="noopener noreferrer nofollow"
-            >
-              {link.name}
-            </a>
-          );
-        })}
-      </nav>
+      <NavBar />
       <div
         className={styles.burger}
         aria-label="Bouton pour ouvrir le Menu Hamburger"

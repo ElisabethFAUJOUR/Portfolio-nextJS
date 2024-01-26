@@ -1,24 +1,16 @@
 import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import AnimeCat from './animeCat/AnimeCat';
-import { ChevronDoubleDown, Link } from 'react-bootstrap-icons';
 import { Github } from 'react-bootstrap-icons';
 import { Linkedin } from 'react-bootstrap-icons';
 import { EnvelopeFill } from 'react-bootstrap-icons';
 import { Download } from 'react-bootstrap-icons';
 import styles from './Home.module.scss';
+import ScrollArrow from './scrollArrow/ScrollArrow';
 
 function Home() {
   return (
     <FadeInSection customClass={styles.home} id="home">
-      <div className={styles.arrow}>
-        <a
-          className={styles.link}
-          href="#about"
-          aria-label="Faire défiler vers le bas jusqu'à la section A propos"
-        >
-          <ChevronDoubleDown />
-        </a>
-      </div>
+      <ScrollArrow />
       <div className={`${styles.container} fade-in`}>
         <div className={styles.content}>
           <div className={styles.socials}>

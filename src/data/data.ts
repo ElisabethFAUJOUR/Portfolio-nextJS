@@ -1,10 +1,10 @@
 export const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'A propos', href: '#about' },
-  { name: 'Mon parcours', href: '#career' },
-  { name: 'Compétences', href: '#skills' },
-  { name: 'Projets', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', id: 'home' },
+  { name: 'A propos', id: 'about' },
+  { name: 'Mon parcours', id: 'career' },
+  { name: 'Compétences', id: 'skills' },
+  { name: 'Projets', id: 'projects' },
+  { name: 'Contact', id: 'contact' },
 ];
 
 export const skillsSections = [
