@@ -1,8 +1,71 @@
 'use client';
 
+import { useState, useEffect, useCallback } from 'react';
 import styles from './AnimeCat.module.scss';
 
 function AnimeCat() {
+  const codePaths = [
+    'M 113.54839,110.26613 92.701612,104.58871',
+    'm 90.129031,103.79032 -13.57258,-3.63709',
+    'M 111.0899,112.97171 96.349001,109.0199',
+    'M 93.90264,108.39263 79.663562,104.44081',
+    'M 111.2255,116.3064 99.663396,113.27519',
+    'm 97.392558,112.63527 -9.865289,-2.5262',
+    'm 85.566573,109.46565 -8.230571,-2.14604',
+    'm 115.22989,121.50261 -12.35726,-3.32454',
+    'M 101.05354,117.80171 86.689008,113.91262',
+    'm 84.619011,113.22262 -6.52363,-1.69363',
+    'm 111.21535,123.88625 -5.70818,-1.50546',
+    'm 103.12354,121.81625 -5.519996,-1.38',
+    'm 94.843546,119.80898 -4.892723,-1.25454',
+    'm 88.006281,117.92716 -6.962722,-1.69363',
+    'm 111.40353,127.83806 -15.995437,-4.14',
+    'M 93.077072,122.99795 80.67731,119.69364',
+    'm 115.73171,132.5426 -7.02545,-1.94454',
+    'M 106.01522,129.91429 95.966411,127.14183',
+    'm 93.219656,126.40235 -8.419477,-2.33494',
+  ];
+
+  // Current path's index
+  const [currentPathIndex, setCurrentPathIndex] = useState<number>(0);
+
+  // Show the next path, memoized using useCallback
+  const showNextPath = useCallback(() => {
+    setCurrentPathIndex((prevIndex) =>
+      // Increment the index or reset when codePaths.lenght reached
+      prevIndex < codePaths.length - 1 ? prevIndex + 1 : 0
+    );
+  }, [codePaths.length]);
+
+  useEffect(() => {
+    // Set up interval for displaying paths
+    let intervalId = setInterval(showNextPath, 100);
+    // Total time for the display all paths
+    let totalAnimationTime = codePaths.length * 100;
+
+    // Clear paths, reset animation, and restart
+    const resetAnimation = () => {
+      setCurrentPathIndex(0); // Reset to the first path
+      clearInterval(intervalId); // Clear the current interval
+      setTimeout(() => {
+        intervalId = setInterval(showNextPath, 100);
+      }, totalAnimationTime);
+    };
+
+    // Start the reset animation loop
+    const resetAnimationInterval = setInterval(() => {
+      if (currentPathIndex === codePaths.length - 1) {
+        resetAnimation();
+      }
+    }, totalAnimationTime);
+
+    // Clear intervals on component unmount
+    return () => {
+      clearInterval(intervalId);
+      clearInterval(resetAnimationInterval);
+    };
+  }, [currentPathIndex, showNextPath, codePaths.length]);
+
   return (
     <div className={styles.cat}>
       <svg
@@ -230,82 +293,16 @@ function AnimeCat() {
           transform="matrix(0.99696458,0,0,0.99669796,-46.093192,-60.708181)"
           style={{ display: 'inline' }}
         >
-          <path
-            className={`${styles.code} ${styles.displayed}`}
-            d="M 113.54839,110.26613 92.701612,104.58871"
-          />
-          <path
-            className={styles.code}
-            d="m 90.129031,103.79032 -13.57258,-3.63709"
-          />
-          <path
-            className={styles.code}
-            d="M 111.0899,112.97171 96.349001,109.0199"
-          />
-          <path
-            className={styles.code}
-            d="M 93.90264,108.39263 79.663562,104.44081"
-          />
-          <path
-            className={styles.code}
-            d="M 111.2255,116.3064 99.663396,113.27519"
-          />
-          <path
-            className={styles.code}
-            d="m 97.392558,112.63527 -9.865289,-2.5262"
-          />
-          <path
-            className={styles.code}
-            d="m 85.566573,109.46565 -8.230571,-2.14604"
-          />
-          <path
-            className={styles.code}
-            d="m 115.22989,121.50261 -12.35726,-3.32454"
-          />
-          <path
-            className={styles.code}
-            d="M 101.05354,117.80171 86.689008,113.91262"
-          />
-          <path
-            className={styles.code}
-            d="m 84.619011,113.22262 -6.52363,-1.69363"
-          />
-          <path
-            className={styles.code}
-            d="m 111.21535,123.88625 -5.70818,-1.50546"
-          />
-          <path
-            className={styles.code}
-            d="m 103.12354,121.81625 -5.519996,-1.38"
-          />
-          <path
-            className={styles.code}
-            d="m 94.843546,119.80898 -4.892723,-1.25454"
-          />
-          <path
-            className={styles.code}
-            d="m 88.006281,117.92716 -6.962722,-1.69363"
-          />
-          <path
-            className={styles.code}
-            d="m 111.40353,127.83806 -15.995437,-4.14"
-          />
-          <path
-            className={styles.code}
-            d="M 93.077072,122.99795 80.67731,119.69364"
-          />
-          <path
-            className={styles.code}
-            d="m 115.73171,132.5426 -7.02545,-1.94454"
-          />
-          <path
-            className={styles.code}
-            d="M 106.01522,129.91429 95.966411,127.14183"
-          />
-          <path
-            className={styles.code}
-            d="m 93.219656,126.40235 -8.419477,-2.33494"
-          />
+          {/* Display all code paths with the animation */}
+          {codePaths.map((path, index) => (
+            <path
+              key={index}
+              className={`${styles.code} ${
+                index <= currentPathIndex ? styles.displayed : ''
+              }`}
+              d={path}
+            />
+          ))}
         </g>
 
         {/* CAT STATIC */}
