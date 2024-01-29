@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 function NavBar() {
   // State variable for the Burger Menu
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  console.log(isOpen);
 
   // Toggle the burger menu
   const toggleBurgerMenu = (event: React.MouseEvent<HTMLButtonElement>) => {

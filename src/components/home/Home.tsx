@@ -16,7 +16,7 @@ function Home() {
           <div className={styles.socials}>
             <a
               className={styles.link}
-              href="https://github.com/ElisabethFAUJOUR"
+              href="https://github.com/ElisabethFjr"
               target="_blank"
               aria-label="Profil GitHub de Elisabeth Faujour"
             >

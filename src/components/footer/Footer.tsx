@@ -12,7 +12,7 @@ function Footer() {
       <FadeInDiv customClass={styles.socials}>
         <a
           className={styles.link}
-          href="https://github.com/ElisabethFAUJOUR"
+          href="https://github.com/ElisabethFjr"
           target="_blank"
           rel="noopener noreferrer nofollow"
           aria-label="Profil GitHub de Elisabeth Faujour"
