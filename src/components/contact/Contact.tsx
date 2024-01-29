@@ -21,6 +21,7 @@ function Contact() {
               name="lastname"
               placeholder="Nom"
               id="lastname"
+              maxLength={100}
               required
             />
             <label className="visually-hidden" htmlFor="firstname">
@@ -32,6 +33,8 @@ function Contact() {
               name="firstname"
               placeholder="Prénom"
               id="firstname"
+              maxLength={100}
+              autoComplete="off"
               required
             />
             <label className="visually-hidden" htmlFor="emailAdress">
@@ -43,6 +46,8 @@ function Contact() {
               name="email"
               placeholder="Email"
               id="emailAdress"
+              maxLength={320}
+              autoComplete="off"
               required
             />
             <label className="visually-hidden" htmlFor="phone">
@@ -55,6 +60,7 @@ function Contact() {
               placeholder="Téléphone (facultatif)"
               id="phone"
               pattern="^(?:\+33|06)[0-9]{8}$"
+              autoComplete="off"
             />
           </div>
           <div className={styles.column}>
@@ -66,6 +72,7 @@ function Contact() {
               name="message"
               placeholder="Ecrivez votre message"
               id="message"
+              autoComplete="off"
               required
             ></textarea>
           </div>

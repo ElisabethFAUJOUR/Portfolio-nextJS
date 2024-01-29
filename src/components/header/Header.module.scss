@@ -11,9 +11,12 @@
   height: 5rem;
   padding: 0 2rem;
   background: $bgVioletDark;
-
   .logo {
-    width: 10rem;
+    width: 160px;
     height: auto;
+    .img {
+      width: 100%;
+      height: auto;
+    }
   }
 }

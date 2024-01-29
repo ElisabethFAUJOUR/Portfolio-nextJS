@@ -12,12 +12,16 @@ function Header() {
         href="#"
         aria-label="Lien vers la page d'accueil"
       >
-        <Image
-          src="/images/logocat.webp"
-          alt="ElisabethF Portfolio Logo"
-          width={160}
-          height={24.48}
-        />
+        <div className={styles.img}>
+          <Image
+            src="/images/logocat.webp"
+            alt="ElisabethF Portfolio Logo"
+            width={160}
+            height={24.48}
+            priority={true}
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </div>
       </a>
       <NavBar />
     </header>
