@@ -31,6 +31,10 @@ a {
 
 .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
 }
 
 // ***Main***
@@ -41,6 +45,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-grow: 1;
 }
 
 .main-layout {
@@ -68,6 +73,28 @@ a {
 }
 
 // ***Error Page***
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  width: 90%;
+  height: 100%;
+  margin-top: 5rem;
+  text-align: center;
+
+  &-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding-bottom: 2rem;
+  }
+
+  &-text {
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+}
 
 // ***SVG Cat***
 path,
@@ -102,5 +129,9 @@ rect {
     font-size: 2rem;
     margin-top: 20%;
     margin-bottom: 15%;
+  }
+  // ***Error Page***
+  .error-title {
+    font-size: 2rem;
   }
 }

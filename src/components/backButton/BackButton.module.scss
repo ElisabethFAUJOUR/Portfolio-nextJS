@@ -1,0 +1,17 @@
+@import 'variables';
+
+.button {
+  width: fit-content;
+  padding: 0.8rem 2.5rem;
+  background: linear-gradient(45deg, $blue, $violet 30%, $violetPink);
+  border-radius: 3rem;
+  box-shadow: 0 2px 4px 0 $shadow;
+  color: $violetLight;
+  font-size: 0.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

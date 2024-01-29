@@ -21,17 +21,16 @@ function About() {
             <p className={styles.paragraph}>
               Forte de mon expérience en Santé, j&apos;accorde une attention
               particulière à l&apos;
-              <span className={styles.bold}>accessibilité</span>
-              lors de la création de mes applications web, assurant une
-              inclusivité totale. Mon engagement se traduit par la création de
-              solutions numériques{' '}
+              <span className={styles.bold}>accessibilité</span> lors de la
+              création de mes applications web, assurant une inclusivité totale.
+              Mon engagement se traduit par la création de solutions numériques{' '}
               <span className={styles.bold}>performantes</span>, centrées sur
               les{' '}
               <span className={styles.bold}>besoins de l&apos;utilisateur</span>{' '}
               et offrant une expérience optimale.
             </p>
             <p className={styles.paragraph}>
-              <span className={styles.bold}>Consciencieuse</span> et sensible au
+              <span className={styles.bold}>Consciencieuse</span> et sensible au{' '}
               <span className={styles.bold}>sens du détail</span>, j&apos;ai à
               cœur de produire des résultats toujours meilleurs. Prête à
               affronter de nouveaux challenges, je suis impatiente de mettre mes
