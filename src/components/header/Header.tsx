@@ -21,12 +21,6 @@ function Header() {
         />
       </a>
       <NavBar />
-      <div
-        className={styles.burger}
-        aria-label="Bouton pour ouvrir le Menu Hamburger"
-      >
-        <List />
-      </div>
     </header>
   );
 }

@@ -3,13 +3,11 @@
 .navbar {
   display: flex;
   gap: 2rem;
-
   .link {
     font-weight: 400;
     letter-spacing: 0.7px;
     text-transform: uppercase;
     position: relative;
-
     &::after {
       content: '';
       position: absolute;
@@ -34,10 +32,52 @@
       transform-origin: center;
       /*définit le point d'origine de la transformation à mi-chemin horizontalement*/
     }
-
     &:hover::after {
       transform: scaleX(1);
       /*au survol, la barre est devient visible*/
     }
+  }
+}
+
+.burger {
+  display: none;
+  padding: 0.4rem;
+  background-color: $violet;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+// Responsive screen < 1199px
+@media (max-width: 1199px) {
+  .navbar {
+    position: fixed;
+    display: flex;
+    left: 100%;
+    top: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgVioletDark;
+    border-top: 1px solid rgb(208, 207, 226, 0.4);
+    border-bottom: 1px solid rgb(208, 207, 226, 0.4);
+    width: 100%;
+    height: calc(100vh - 4.2rem);
+    padding: 1.2rem 0;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    .link::after {
+      bottom: -5px;
+    }
+  }
+
+  .navbar.active {
+    left: 0;
+    transform: translateX(0);
+    opacity: 1;
+    height: calc(100vh - 4.2rem);
+  }
+
+  .burger {
+    display: block;
   }
 }
