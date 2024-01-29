@@ -9,7 +9,7 @@ export const navLinks = [
 
 export const skillsSections = [
   {
-    name: 'Front-End',
+    title: 'Front-End',
     elems: [
       { name: 'HTML5', iconSrc: '/logos/icons8-html-50.webp' },
       { name: 'CSS3', iconSrc: '/logos/icons8-css3-50.webp' },
@@ -23,7 +23,7 @@ export const skillsSections = [
     ],
   },
   {
-    name: 'Back-End',
+    title: 'Back-End',
     elems: [
       { name: 'NodeJS', iconSrc: '/logos/icons8-node-js-48.webp' },
       { name: 'Express', iconSrc: '/logos/icons8-express-js-48.webp' },
@@ -45,7 +45,7 @@ export const skillsSections = [
     ],
   },
   {
-    name: 'Outils & Environnement',
+    title: 'Outils & Environnement',
     elems: [
       {
         name: 'VS Code',
@@ -58,7 +58,7 @@ export const skillsSections = [
     ],
   },
   {
-    name: 'Soft Skills',
+    title: 'Soft Skills',
     elems: [
       {
         name: 'Autonomie',

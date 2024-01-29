@@ -13,7 +13,6 @@ function Header() {
         aria-label="Lien vers la page d'accueil"
       >
         <Image
-          className={styles.img}
           src="/images/logocat.webp"
           alt="ElisabethF Portfolio Logo"
           width={160}

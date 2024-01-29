@@ -9,3 +9,13 @@
   background: linear-gradient($bgGradiantDark, $bgGradiantLight);
   border-radius: 0.4rem;
 }
+
+//Responsive screen < 768px
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 2.5rem;
+  }
+}

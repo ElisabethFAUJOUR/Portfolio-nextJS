@@ -9,3 +9,21 @@
     gap: 2rem;
   }
 }
+
+//Responsive screen < 999px
+@media (max-width: 999px) {
+  .projects {
+    .container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+//Responsive screen < 699px
+@media (max-width: 699px) {
+  .projects {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+}

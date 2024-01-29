@@ -27,3 +27,21 @@
     font-size: 0.8rem;
   }
 }
+
+//Responsive screen < 768px
+@media (max-width: 768px) {
+  .text {
+    font-size: 0.7rem;
+  }
+}
+
+//Responsive screen < 699px
+@media (max-width: 699px) {
+  .footer {
+    padding: 2.3rem 1rem;
+    .text {
+      font-size: 0.7rem;
+      line-height: 1.5;
+    }
+  }
+}

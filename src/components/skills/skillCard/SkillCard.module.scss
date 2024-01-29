@@ -21,3 +21,12 @@
     list-style-type: none;
   }
 }
+
+//Responsive screen < 768px
+@media (max-width: 768px) {
+  .card {
+    .list {
+      gap: 2rem;
+    }
+  }
+}

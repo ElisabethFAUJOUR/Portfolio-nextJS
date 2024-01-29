@@ -126,3 +126,19 @@
     animation-delay: 0.1s;
   }
 }
+
+//Responsive screen < 1199px
+@media (max-width: 1199px) {
+  .cat {
+    width: 55%;
+    height: auto;
+  }
+}
+
+//Responsive screen < 768px
+@media (max-width: 699px) {
+  .cat {
+    width: 300px;
+    height: auto;
+  }
+}

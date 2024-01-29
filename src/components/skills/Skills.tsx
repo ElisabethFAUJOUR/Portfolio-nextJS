@@ -9,7 +9,11 @@ function Skills() {
       <h2 className={`${styles.title} main-title fade-in`}>Compétences.</h2>
       <div className={`${styles.container} fade-in`}>
         {skillsSections.map((section) => (
-          <SkillCard key={section.name} elems={section.elems} />
+          <SkillCard
+            key={section.title}
+            title={section.title}
+            elems={section.elems}
+          />
         ))}
       </div>
     </FadeInSection>

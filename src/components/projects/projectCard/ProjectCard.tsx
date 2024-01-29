@@ -28,13 +28,21 @@ function ProjectCard({
       rel="noopener noreferrer nofollow"
     >
       <FadeInDiv customClass={styles.card}>
-        <Image
-          className={styles.img}
-          src={imageSrc}
-          alt={title}
-          width={362}
-          height={175}
-        />
+        <div className={styles.img}>
+          <Image
+            src={imageSrc}
+            alt={title}
+            width={362}
+            height={175}
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+              objectPosition: 'center',
+            }}
+          />
+        </div>
+
         <div className={styles.body}>
           <h3 className={styles.title}>{title}</h3>
           <p className={styles.description}>{description}</p>

@@ -1,7 +1,7 @@
 'use client';
 
 import { navLinks } from '@/data/data';
-import { List, XLg } from 'react-bootstrap-icons';
+import { List, X } from 'react-bootstrap-icons';
 import styles from './NavBar.module.scss';
 import { useEffect, useState } from 'react';
 
@@ -60,7 +60,7 @@ function NavBar() {
         aria-label="Bouton pour ouvrir le Menu Hamburger"
         title="Menu"
       >
-        {isOpen ? <XLg /> : <List />}
+        {isOpen ? <X /> : <List />}
       </button>
     </>
   );

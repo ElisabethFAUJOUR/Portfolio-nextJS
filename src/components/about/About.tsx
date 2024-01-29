@@ -46,6 +46,10 @@ function About() {
             alt="Elisabeth Photo"
             width={396}
             height={396}
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
         </div>
       </div>

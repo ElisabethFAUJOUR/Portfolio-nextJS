@@ -64,3 +64,30 @@
     }
   }
 }
+
+//Responsive screen < 999px
+@media (max-width: 999px) {
+  .contact {
+    .form {
+      .container {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 0rem;
+        .column {
+          resize: none;
+          outline: none;
+          height: 25vh;
+        }
+      }
+    }
+  }
+}
+
+//Responsive screen < 768px
+@media (max-width: 768px) {
+  .contact {
+    .form {
+      padding: 1.5em;
+    }
+  }
+}

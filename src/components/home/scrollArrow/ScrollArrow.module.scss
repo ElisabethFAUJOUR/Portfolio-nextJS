@@ -10,3 +10,10 @@
   font-size: 2rem;
   animation: glow 2s infinite;
 }
+
+//Responsive screen < 999px
+@media (max-width: 999px) {
+  .arrow {
+    font-size: 1.6rem;
+  }
+}

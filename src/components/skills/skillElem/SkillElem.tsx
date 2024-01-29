@@ -9,13 +9,7 @@ interface SkillElemProps {
 function SkillElem({ name, iconSrc }: SkillElemProps) {
   return (
     <li className={styles.element}>
-      <Image
-        className={styles.icon}
-        src={iconSrc}
-        alt={name}
-        width={45}
-        height={45}
-      />
+      <Image src={iconSrc} alt={name} width={45} height={45} />
       <p className={styles.text}>{name}</p>
     </li>
   );

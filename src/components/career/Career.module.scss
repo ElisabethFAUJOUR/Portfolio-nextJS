@@ -106,3 +106,54 @@
     }
   }
 }
+
+//Responsive screen < 999px
+@media (max-width: 999px) {
+  .timeline {
+    &::before {
+      width: 0.085rem;
+      left: 1rem;
+      z-index: 0;
+    }
+    .container {
+      position: inherit;
+      width: calc(100% - 3rem);
+      padding: 1.5rem;
+      margin-left: 3rem;
+      margin-right: 0;
+      margin-bottom: 3rem;
+      &:nth-child(even) {
+        margin-left: 3rem;
+        margin-right: 0;
+      }
+      &::before,
+      &::after {
+        display: none;
+      }
+      .icon {
+        left: -47px;
+      }
+
+      .block {
+        font-size: 0.9rem;
+        .title {
+          font-size: 1rem;
+          line-height: 1.1;
+        }
+        .title,
+        .subtitle {
+          padding-bottom: 0.8rem;
+        }
+        .list {
+          .elem {
+            line-height: 1.5;
+            padding-bottom: 0.3rem;
+          }
+        }
+        .location {
+          line-height: 1.1;
+        }
+      }
+    }
+  }
+}

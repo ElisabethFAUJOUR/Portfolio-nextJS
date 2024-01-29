@@ -33,7 +33,7 @@ a {
   position: relative;
 }
 
-// ***MAIN***
+// ***Main***
 
 .main {
   display: flex;
@@ -67,13 +67,40 @@ a {
   border: 0;
 }
 
-// ***ERROR Page***
+// ***Error Page***
 
-// ***SVG Cat*** //
+// ***SVG Cat***
 path,
 rect {
   stroke-width: 0.5;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-opacity: 1;
+}
+
+//Responsive screen < 1199px
+@media (max-width: 1199px) {
+  // ***Main***
+  .main-title {
+    font-size: 2.6rem;
+  }
+}
+
+//Responsive screen < 999px
+@media (max-width: 999px) {
+  // ***Main***
+  .main-title {
+    font-size: 2.2rem;
+    margin: 8% 0;
+  }
+}
+
+//Responsive screen < 768px
+@media (max-width: 768px) {
+  // ***Main***
+  .main-title {
+    font-size: 2rem;
+    margin-top: 20%;
+    margin-bottom: 15%;
+  }
 }

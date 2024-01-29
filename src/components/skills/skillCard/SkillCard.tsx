@@ -9,13 +9,14 @@ interface Elem {
 }
 
 interface SkillCardProps {
+  title: string;
   elems: Elem[];
 }
 
-function SkillCard({ elems }: SkillCardProps) {
+function SkillCard({ title, elems }: SkillCardProps) {
   return (
     <FadeInDiv customClass={styles.card}>
-      <h3 className={styles.subtitle}>Front-End</h3>
+      <h3 className={styles.subtitle}>{title}</h3>
       <ul className={styles.list}>
         {elems.map((elem) => (
           <SkillElem key={elem.name} name={elem.name} iconSrc={elem.iconSrc} />
