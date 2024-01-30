@@ -38,7 +38,7 @@ function Footer() {
         </a>
       </FadeInDiv>
       <p className={styles.text}>
-        © 2023 Elisabeth FAUJOUR - Tous droits réservés.
+        © 2024 Elisabeth FAUJOUR - Tous droits réservés.
       </p>
       <p className={styles.text}>
         Réalisé avec <span className={styles.bold}>NextJS</span>.
