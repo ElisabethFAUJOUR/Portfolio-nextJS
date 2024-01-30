@@ -1,7 +1,9 @@
+import { log } from 'console';
 import { NextRequest, NextResponse } from 'next/server';
 const nodemailer = require('nodemailer');
 import z from 'zod';
 
+// Validation schema
 const FormSchema = z.object({
   lastname: z.string(),
   firstname: z.string(),
@@ -12,10 +14,20 @@ const FormSchema = z.object({
 
 export async function POST(req: NextRequest) {
   try {
+    // Get data from request payload
     const body = await req.json();
-    const { lastname, firstname, email, phone, message } =
-      FormSchema.parse(body);
+    // Checking schemas data
+    const validationResult = FormSchema.safeParse(body);
+    if (!validationResult.success) {
+      return NextResponse.json(
+        {
+          message: "User didn't respect the expected format.",
+        },
+        { status: 400 }
+      );
+    }
 
+    // Config Nodemailer Transport
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -24,28 +36,30 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    // Config mail options
     const mailOptions = {
       from: process.env.MY_EMAIL,
       to: process.env.MY_EMAIL,
-      subject: 'New Contact Form Submission',
+      subject: 'Nouveau Message Portfolio !',
       html: `
-        <p>Name: ${firstname} ${lastname}</p>
-        <p>Email: ${email}</p>
-        <p>Phone: ${phone || 'Non fourni'}</p>
-        <p>Message: ${message}</p>
+        <p>Nom: ${validationResult.data.firstname} ${validationResult.data.lastname}</p>
+        <p>Email: ${validationResult.data.email}</p>
+        <p>Tel: ${validationResult.data.phone || 'Non fourni'}</p>
+        <p>Message: ${validationResult.data.message}</p>
       `,
     };
 
+    // Send email and log infos
     const info = await transporter.sendMail(mailOptions);
-
     console.log('Email sent:', info);
 
-    return NextResponse.json({ message: 'Email envoyé !' }, { status: 200 });
+    return NextResponse.json({ message: 'Email sent !' }, { status: 200 });
   } catch (error) {
     console.log(error);
-
     return NextResponse.json(
-      { message: 'Une erreure est survenue, veuillez réessayer plus tard.' },
+      {
+        message: 'Oops, an error occurs, please try again later.',
+      },
       { status: 500 }
     );
   }

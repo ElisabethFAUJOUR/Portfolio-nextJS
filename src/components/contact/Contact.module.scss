@@ -9,8 +9,17 @@
     gap: 2rem;
     margin: 2rem 0;
     padding: 3rem;
+    min-height: 388px;
     background: linear-gradient($bgGradiantDark, $bgGradiantLight);
     border-radius: 0.4rem;
+    .message {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      line-height: 1.8;
+      font-weight: 300;
+    }
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -44,6 +53,15 @@
           resize: none;
           outline: none;
           height: 100%;
+        }
+        .error {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 0.8rem;
+          font-weight: 300;
+          padding-bottom: 1rem;
+          padding-left: 0.5rem;
         }
       }
     }
