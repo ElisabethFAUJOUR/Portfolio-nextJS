@@ -115,4 +115,11 @@ export const projects = [
     imageSrc: '/images/hunt.webp',
     tags: ['VanillaJS', 'EJS', 'NodeJS', 'Express', 'postgreSQL'],
   },
+  {
+    title: 'Mon Portfolio',
+    description: `Projet personnel réalisé avec NextJS.`,
+    link: 'https://github.com/ElisabethFjr/Portfolio-nextJS',
+    imageSrc: '/images/portfolio.webp',
+    tags: ['NextJS', 'Typescript', 'SCSS', 'Nodemailer'],
+  },
 ];

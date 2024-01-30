@@ -35,11 +35,13 @@
     height: 60%;
     padding: 8%;
     .title {
+      height: 20%;
       padding-bottom: 8%;
       font-size: 1.3rem;
       font-weight: 600;
     }
     .description {
+      height: 35%;
       padding-bottom: 8%;
       color: $violetLight;
       font-size: 1rem;
@@ -48,6 +50,7 @@
       list-style-type: square;
     }
     .tags {
+      height: 45%;
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -56,6 +59,7 @@
       font-size: 0.8rem;
       line-height: 2;
       .elem {
+        height: fit-content;
         background-color: $violetContact;
         border-radius: 0.4rem;
         padding: 0.2rem 0.6rem;
