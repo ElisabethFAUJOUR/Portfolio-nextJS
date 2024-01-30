@@ -6,8 +6,8 @@ import styles from './Skills.module.scss';
 function Skills() {
   return (
     <FadeInSection customClass={`${styles.skills} main-layout`} id="skills">
-      <h2 className={`${styles.title} main-title fade-in`}>Compétences.</h2>
-      <div className={`${styles.container} fade-in`}>
+      <h2 className={`${styles.title} main-title`}>Compétences.</h2>
+      <div className={styles.container}>
         {skillsSections.map((section) => (
           <SkillCard
             key={section.title}

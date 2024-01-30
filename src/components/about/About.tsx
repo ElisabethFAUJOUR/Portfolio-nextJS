@@ -33,7 +33,7 @@ function About() {
               <span className={styles.bold}>Consciencieuse</span> et sensible au{' '}
               <span className={styles.bold}>sens du détail</span>, j&apos;ai à
               cœur de produire des résultats toujours meilleurs. Dotée
-              d&apos;une affinité naturelle pour l&apos;UI Design, je met en
+              d&apos;une affinité naturelle pour l&apos;UI Design, je mets en
               avant ma <span className={styles.bold}>créativité</span> pour
               créer des expériences visuelles attractive et harmonieuse.
             </p>

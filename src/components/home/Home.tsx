@@ -11,7 +11,7 @@ function Home() {
   return (
     <FadeInSection customClass={styles.home} id="home">
       <ScrollArrow />
-      <div className={`${styles.container} fade-in`}>
+      <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.socials}>
             <a

@@ -22,7 +22,7 @@ function ProjectCard({
 }: ProjectCardProps) {
   return (
     <a
-      className={`${styles.link} fade-in`}
+      className={`${styles.link}`}
       href={link}
       target="_blank"
       rel="noopener noreferrer nofollow"
@@ -36,7 +36,7 @@ function ProjectCard({
             height={175}
             style={{
               width: '100%',
-              height: 'auto',
+              height: '100%',
               objectFit: 'cover',
               objectPosition: 'center',
             }}

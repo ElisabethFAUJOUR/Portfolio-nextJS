@@ -9,7 +9,7 @@ import styles from './Career.module.scss';
 function Career() {
   return (
     <FadeInSection customClass={`${styles.career} main-layout`} id="career">
-      <h2 className={`${styles.title} main-title fade-in`}>Mon parcours.</h2>
+      <h2 className={`${styles.title} main-title`}>Mon parcours.</h2>
       <div className={styles.timeline}>
         <FadeInDiv customClass={styles.container}>
           <div className={`${styles.icon} ${styles.left}`}>

@@ -6,7 +6,7 @@ import styles from './Projects.module.scss';
 function Projects() {
   return (
     <FadeInSection customClass={`${styles.projects} main-layout`} id="projects">
-      <h2 className={`${styles.title} main-title fade-in`}>Projets.</h2>
+      <h2 className={`${styles.title} main-title`}>Projets.</h2>
       <div className={styles.container}>
         {projects.map((project) => (
           <ProjectCard
