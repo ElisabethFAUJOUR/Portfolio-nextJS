@@ -94,7 +94,11 @@
         .column {
           resize: none;
           outline: none;
-          height: 25vh;
+          .textarea {
+            resize: none;
+            outline: none;
+            height: 200px;
+          }
         }
       }
     }
