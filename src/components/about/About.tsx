@@ -32,10 +32,10 @@ function About() {
             <p className={styles.paragraph}>
               <span className={styles.bold}>Consciencieuse</span> et sensible au{' '}
               <span className={styles.bold}>sens du détail</span>, j&apos;ai à
-              cœur de produire des résultats toujours meilleurs. Prête à
-              affronter de nouveaux challenges, je suis impatiente de mettre mes
-              compétences et ma <span className={styles.bold}>créativité</span>{' '}
-              au cœur de projets innovants !
+              cœur de produire des résultats toujours meilleurs. Dotée
+              d&apos;une affinité naturelle pour l&apos;UI Design, je met en
+              avant ma <span className={styles.bold}>créativité</span> pour
+              créer des expériences visuelles attractive et harmonieuse.
             </p>
           </div>
         </article>
