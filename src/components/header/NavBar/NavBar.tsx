@@ -1,9 +1,10 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { navLinks } from '@/data/data';
 import { List, X } from 'react-bootstrap-icons';
+import Link from 'next/link';
 import styles from './NavBar.module.scss';
-import { useEffect, useState } from 'react';
 
 function NavBar() {
   // State variable for the Burger Menu
@@ -34,24 +35,24 @@ function NavBar() {
     const targetElement = document.getElementById(id);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
+      if (isOpen) {
+        closeBurgerMenu();
+      }
     }
   };
 
   return (
     <>
       <nav className={`${styles.navbar} ${isOpen ? styles.active : ''}`}>
-        {navLinks.map((link) => {
-          return (
-            <a
-              key={link.name}
-              onClick={() => handleClick(link.id)}
-              className={styles.link}
-              rel="noopener noreferrer nofollow"
-            >
-              {link.name}
-            </a>
-          );
-        })}
+        <ul className={styles.list}>
+          {navLinks.map((link) => (
+            <li key={link.name} className={styles.link}>
+              <a key={link.name} onClick={() => handleClick(link.id)}>
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </nav>
       <button
         className={styles.burger}
