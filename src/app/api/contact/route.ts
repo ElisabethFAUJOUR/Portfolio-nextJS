@@ -17,16 +17,16 @@ export async function POST(req: NextRequest) {
       FormSchema.parse(body);
 
     const transporter = nodemailer.createTransport({
-      service: process.env.EMAIL_SERVICE,
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_PERSONAL,
-        pass: process.env.EMAIL_PASSWORD,
+        user: process.env.MY_EMAIL,
+        pass: process.env.MY_PASSWORD,
       },
     });
 
     const mailOptions = {
-      from: `${email}`,
-      to: process.env.NEXT_PUBLIC_EMAIL_SERVICE,
+      from: process.env.MY_EMAIL,
+      to: process.env.MY_EMAIL,
       subject: 'New Contact Form Submission',
       html: `
         <p>Name: ${firstname} ${lastname}</p>
