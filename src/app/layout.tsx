@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'Portfolio de Elisabeth FAUJOUR, développeuse Web Front-end, et réalisé avec amour avec NextJS.',
   keywords:
     'Elisabeth FAUJOUR, Portfolio, Développeuse, Développeur, Développeur Web, Front-End, Javascript, NextJS, Web, Reconversion, React, UX/UI, HTML, CSS, SCSS, Typescript.',
-  metadataBase: new URL('https://elisabethfaujour-portfolio.vercel.app'),
+  metadataBase: new URL('https://elisabethfaujour.vercel.app/'),
 };
 
 export default function RootLayout({

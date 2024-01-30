@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/'],
       },
     ],
-    sitemap: 'https://elisaebthfaujour-portfolio.vercel.app/',
+    sitemap: 'https://elisabethfaujour.vercel.app/',
   };
 }
