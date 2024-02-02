@@ -35,7 +35,7 @@ function About() {
               cœur de produire des résultats toujours meilleurs. Dotée
               d&apos;une affinité naturelle pour l&apos;UI Design, je mets en
               avant ma <span className={styles.bold}>créativité</span> pour
-              créer des expériences visuelles attractive et harmonieuse.
+              créer des expériences visuelles intuivives et harmonieuses.
             </p>
           </div>
         </article>
