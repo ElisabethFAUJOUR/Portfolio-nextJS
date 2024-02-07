@@ -13,10 +13,10 @@ function About() {
               &quot;I&apos;m going on an adventure !&quot; - Bilbo Baggins
             </p>
             <p className={styles.paragraph}>
-              Après 7 années passionnantes en tant que Masseur-kinésithérapeute
-              libéral, j&apos;ai décidé de sortir de ma zone de confort pour
-              d&apos;explorer de nouveaux horizons professionnels, plongeant
-              ainsi dans le vaste monde du Développement Web.
+              Après 7 années en tant que Kinésithérapeute libéral, j&apos;ai
+              décidé de sortir de ma zone de confort pour d&apos;explorer de
+              nouveaux horizons professionnels, plongeant ainsi dans le vaste
+              monde du Développement Web.
             </p>
             <p className={styles.paragraph}>
               Forte de mon expérience en Santé, j&apos;accorde une attention
