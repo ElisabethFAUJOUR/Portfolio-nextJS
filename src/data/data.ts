@@ -95,18 +95,18 @@ export const projects = [
     ],
   },
   {
+    title: 'ToDo App NextJS',
+    description: 'Projet personnel de ToDo App utilisant NextJs et Prisma.',
+    link: 'https://github.com/ElisabethFjr/todoapp-nextjs',
+    imageSrc: '/images/todoapp.webp',
+    tags: ['NextJS', 'Prisma', 'postgreSQL', 'Typescript', 'SCSS'],
+  },
+  {
     title: 'Elden Ring Bosses',
     description: `Projet personnel NextJS avec l'API open source Elden Ring.`,
     link: 'https://github.com/ElisabethFjr/elden-ring-bosses',
     imageSrc: '/images/eldenring.webp',
     tags: ['NextJS', 'Javascript', 'Typescript', 'SCSS', 'API'],
-  },
-  {
-    title: 'Ghibliotheque',
-    description: 'Projet personnel sur les films du studio Ghibli.',
-    link: 'https://github.com/ElisabethFjr/Ghibliotheque',
-    imageSrc: '/images/ghibliotheque.webp',
-    tags: ['VanillaJS', 'EJS', 'NodeJS', 'Express', 'postgreSQL'],
   },
   {
     title: 'Hunt Showdown Arsenal',
