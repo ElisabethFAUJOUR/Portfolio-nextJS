@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Poppins, Roboto } from 'next/font/google';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import '../styles/globals.scss';
@@ -9,8 +9,6 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 });
-
-console.log(poppins);
 
 export const metadata: Metadata = {
   title: 'Portfolio - Elisabeth FAUJOUR - Développeuse Web Front-End',
@@ -28,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={`${poppins.className} antialiased`}>
+      <body className={poppins.className}>
         <div className="container">
           <Header />
           <main className="main">{children}</main>
