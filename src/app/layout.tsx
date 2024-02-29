@@ -10,6 +10,8 @@ const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 });
 
+console.log(poppins);
+
 export const metadata: Metadata = {
   title: 'Portfolio - Elisabeth FAUJOUR - Développeuse Web Front-End',
   description:
