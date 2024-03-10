@@ -41,12 +41,16 @@ function Home() {
           <div className={styles.infos}>
             <div>
               <h1 className={styles.name}>Elisabeth FAUJOUR</h1>
-              <h2 className={styles.job}>Développeuse Web Front-End</h2>
+              <h2 className={styles.job}>
+                Développeuse Web React | Next.js | Node.js
+              </h2>
             </div>
             <a
               className={styles.resume}
               href="/docs/Elisabeth_FAUJOUR_CV.pdf"
               download="Elisabeth_FAUJOUR_CV.pdf"
+              aria-label="Télécharger mon CV"
+              title="Télécharger mon CV"
             >
               <Download size={16} /> Mon CV
             </a>
