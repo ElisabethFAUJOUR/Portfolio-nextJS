@@ -14,12 +14,12 @@ https://elisabethfaujour.vercel.app
 - Typescript
 - SASS
 
-## Dependencies
+## Third-party Dependencies 
 
 - DOMPurify
-- Zod
-- Nodemailer
-- Nanoid
+- zod
+- nodemailer
+- nanoid
 
 ## Preview
 
