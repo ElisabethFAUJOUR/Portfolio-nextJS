@@ -12,7 +12,14 @@ https://elisabethfaujour.vercel.app
 
 - Next.js
 - Typescript
-- SCSS
+- SASS
+
+## Dependencies
+
+- DOMPurify
+- Zod
+- Nodemailer
+- Nanoid
 
 ## Preview
 
