@@ -1,0 +1,17 @@
+{
+  "languageSelect": {
+    "aria-label": "Changer la langue"
+  },
+  "navLinks": [
+    { "name": "Home", "id": "home" },
+    { "name": "A Propos", "id": "about" },
+    { "name": "Mon Parcours", "id": "career" },
+    { "name": "Compétences", "id": "skills" },
+    { "name": "Projets", "id": "projects" },
+    { "name": "Contact", "id": "contact" }
+  ],
+  "burgerMenu": {
+    "aria-label": "Bouton pour ouvrir le Menu Hamburger",
+    "title": "Menu"
+  }
+}

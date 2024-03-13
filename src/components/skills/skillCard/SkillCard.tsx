@@ -1,4 +1,3 @@
-import { skillsSections } from '@/data/data';
 import FadeInDiv from '@/components/animations/FadeInDiv/FadeInDiv';
 import SkillElem from '../skillElem/SkillElem';
 import styles from './SkillCard.module.scss';

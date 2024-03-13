@@ -1,0 +1,13 @@
+{
+  "title": "Me contacter.",
+  "placeholder": {
+    "lastname": "Nom",
+    "firstname": "Prénom",
+    "email": "Email",
+    "phone": "Téléphone (facultatif)"
+  },
+  "errorMessage": "Veuillez saisir un email valide.",
+  "successMessage": "Le message a bien été envoyé ! Je vous recontacte dès que possible. A bientôt !",
+  "sendButton": "Envoyer",
+  "messagePlaceholder": "Ecrivez votre message"
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Projects.",
+  "projects": [
+    {
+      "title": "O'Journey",
+      "description": "Application d'organisation de voyage interactive.",
+      "link": "https://o-journey.vercel.app/",
+      "imageSrc": "/images/ojourney.webp",
+      "tags": [
+        "React",
+        "Redux",
+        "Typescript",
+        "Node.js",
+        "Express",
+        "postgreSQL",
+        "API REST"
+      ]
+    },
+    {
+      "title": "ToDo List Next.js",
+      "description": "Projet personnel de ToDo List utilisant Next.js et Prisma.",
+      "link": "https://github.com/ElisabethFjr/todoapp-nextjs",
+      "imageSrc": "/images/todoapp.webp",
+      "tags": ["Next.js", "Prisma", "postgreSQL", "Typescript", "SCSS"]
+    },
+    {
+      "title": "Elden Ring Bosses",
+      "description": "Projet personnel Next.js avec l'API open source Elden Ring.",
+      "link": "https://github.com/ElisabethFjr/elden-ring-bosses",
+      "imageSrc": "/images/eldenring.webp",
+      "tags": ["Next.js", "Javascript", "Typescript", "SCSS", "API"]
+    },
+    {
+      "title": "Hunt Showdown Arsenal",
+      "description": "Projet personnel sur le jeu vidéo Hunt Showdown (Crytek).",
+      "link": "https://github.com/ElisabethFjr/Hunt-Showdown-Arsenal",
+      "imageSrc": "/images/hunt.webp",
+      "tags": ["Vanilla JS", "EJS", "Node.js", "Express", "postgreSQL"]
+    },
+    {
+      "title": "Mon Portfolio",
+      "description": "Projet personnel réalisé avec Next.js.",
+      "link": "https://github.com/ElisabethFjr/Portfolio-nextJS",
+      "imageSrc": "/images/portfolio.webp",
+      "tags": ["Next.js", "Typescript", "SCSS", "Nodemailer"]
+    }
+  ]
+}
