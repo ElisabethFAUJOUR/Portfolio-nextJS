@@ -23,7 +23,7 @@ function Header() {
             />
           </div>
         </a>
-        <LanguageSelect />
+        {/* <LanguageSelect /> */}
       </div>
       <NavBar />
     </header>
