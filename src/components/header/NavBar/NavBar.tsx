@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { navLinks } from '@/data/data';
 import { List, X } from 'react-bootstrap-icons';
-import Link from 'next/link';
 import styles from './NavBar.module.scss';
 
 function NavBar() {

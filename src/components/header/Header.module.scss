@@ -11,12 +11,17 @@
   height: 5rem;
   padding: 0 2rem;
   background: $bgVioletDark;
-  .logo {
-    width: 160px;
-    height: auto;
-    .img {
-      width: 100%;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    .logo {
+      width: 160px;
       height: auto;
+      .img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }
