@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import styles from './SkillElem.module.scss';
+import { Skill } from '@/@types';
 
 interface SkillElemProps {
-  name: string;
-  iconSrc: string;
+  elem: Skill;
 }
 
-function SkillElem({ name, iconSrc }: SkillElemProps) {
+function SkillElem({ elem }: SkillElemProps) {
   return (
     <li className={styles.element}>
-      <Image src={iconSrc} alt={name} width={45} height={45} />
-      <p className={styles.text}>{name}</p>
+      <Image src={elem.iconSrc} alt={elem.name} width={45} height={45} />
+      <p className={styles.text}>{elem.name}</p>
     </li>
   );
 }

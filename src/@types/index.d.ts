@@ -10,3 +10,12 @@ export interface CareerSection {
   description: string[];
   location: string;
 }
+
+export interface Skill {
+  name: string;
+  iconSrc: string;
+}
+export interface SkillsSection {
+  title: string;
+  elems: Skill[];
+}

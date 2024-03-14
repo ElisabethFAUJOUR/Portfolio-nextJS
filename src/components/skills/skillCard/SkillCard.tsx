@@ -1,6 +1,7 @@
 import FadeInDiv from '@/components/animations/FadeInDiv/FadeInDiv';
 import SkillElem from '../skillElem/SkillElem';
 import styles from './SkillCard.module.scss';
+import { Skill, SkillsSection } from '@/@types';
 
 interface Elem {
   name: string;
@@ -8,17 +9,16 @@ interface Elem {
 }
 
 interface SkillCardProps {
-  title: string;
-  elems: Elem[];
+  section: SkillsSection;
 }
 
-function SkillCard({ title, elems }: SkillCardProps) {
+function SkillCard({ section }: SkillCardProps) {
   return (
     <FadeInDiv customClass={styles.card}>
-      <h3 className={styles.subtitle}>{title}</h3>
+      <h3 className={styles.subtitle}>{section.title}</h3>
       <ul className={styles.list}>
-        {elems.map((elem) => (
-          <SkillElem key={elem.name} name={elem.name} iconSrc={elem.iconSrc} />
+        {section.elems.map((elem) => (
+          <SkillElem key={elem.name} elem={elem} />
         ))}
       </ul>
     </FadeInDiv>
