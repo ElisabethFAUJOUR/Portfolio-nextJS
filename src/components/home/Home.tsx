@@ -11,7 +11,7 @@ import {
 import styles from './Home.module.scss';
 
 function Home() {
-  // t function for translation form the 'header' json file
+  // t function for translation form the 'home' json file
   const { t } = useTranslation('home');
   return (
     <FadeInSection customClass={styles.home} id="home">

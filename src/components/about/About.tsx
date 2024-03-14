@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from './About.module.scss';
 
 function About() {
-  // t function for translation form the 'header' json file
+  // t function for translation form the 'about' json file
   const { t } = useTranslation('about');
   return (
     <FadeInSection customClass={`${styles.about} main-layout`} id="about">

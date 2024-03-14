@@ -1,6 +1,7 @@
-import { careersSection } from '@/data/data';
+import useTranslation from 'next-translate/useTranslation';
 import FadeInDiv from '../animations/FadeInDiv/FadeInDiv';
 import FadeInSection from '../animations/FadeInSection/FadeInSection';
+import { CareerSection } from '@/@types';
 import { BriefcaseFill } from 'react-bootstrap-icons';
 import { Calendar3 } from 'react-bootstrap-icons';
 import { BuildingFill } from 'react-bootstrap-icons';
@@ -8,11 +9,19 @@ import { MortarboardFill } from 'react-bootstrap-icons';
 import styles from './Career.module.scss';
 
 function Career() {
+  // t function for translation form the 'career' json file
+  const { t } = useTranslation('career');
+  const careerSection: CareerSection[] = t(
+    'careerSection',
+    {},
+    { returnObjects: true }
+  );
+
   return (
     <FadeInSection customClass={`${styles.career} main-layout`} id="career">
-      <h2 className={`${styles.title} main-title`}>Mon parcours.</h2>
+      <h2 className={`${styles.title} main-title`}>{t('title')}</h2>
       <div className={styles.timeline}>
-        {careersSection.map((career, index) => (
+        {careerSection.map((career, index) => (
           <FadeInDiv key={index} customClass={styles.container}>
             <div
               className={`${styles.icon} ${index % 2 === 0 ? styles.left : styles.right}`}

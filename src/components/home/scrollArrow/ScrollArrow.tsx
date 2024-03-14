@@ -5,7 +5,7 @@ import { ChevronDoubleDown } from 'react-bootstrap-icons';
 import styles from './ScrollArrow.module.scss';
 
 function ScrollArrow() {
-  // t function for translation form the 'header' json file
+  // t function for translation form the 'home' json file
   const { t } = useTranslation('home');
   const handleClick = () => {
     const targetElement = document.getElementById('about');
