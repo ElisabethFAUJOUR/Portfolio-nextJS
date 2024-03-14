@@ -1,12 +1,17 @@
 'use client';
 
 import { ChangeEvent, FormEvent, useState } from 'react';
+import useTranslation from 'next-translate/useTranslation';
 import DOMPurify from 'dompurify';
 import FadeInSection from '../animations/FadeInSection/FadeInSection';
+import Spinner from '../spinner/Spinner';
 import { ExclamationCircleFill, SendCheckFill } from 'react-bootstrap-icons';
 import styles from './Contact.module.scss';
 
 function Contact() {
+  // t function for translation form the 'contact' json file
+  const { t } = useTranslation('contact');
+
   // Declaration State Variables
   const [values, setValues] = useState({
     lastname: '',
@@ -15,6 +20,7 @@ function Contact() {
     phone: '',
     message: '',
   });
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [emailError, setEmailError] = useState<boolean>(false);
   const [message, setMessage] = useState<string>('');
@@ -33,6 +39,7 @@ function Contact() {
   // Handle form submission and Fetch API
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsLoading(true);
     const formData = new FormData(event.currentTarget);
     // FormData Json Object
     const formDataObject = Object.fromEntries(formData.entries());
@@ -49,26 +56,24 @@ function Contact() {
 
       if (response.ok) {
         setIsSuccess(true);
-        setMessage(
-          'Le message a bien été envoyé ! Je vous recontacte dès que possible. A bientôt !'
-        );
+        setMessage(t('successMessage'));
       } else if (response.status === 400) {
         setEmailError(true);
-        setMessage('Veuillez saisir un email valide.');
+        setMessage(t('errorEmailMessage'));
       } else {
-        setMessage(
-          "Oops, une erreur est survenue lors de l'envoi du message. Veuillez réessayer plus tard."
-        );
+        setMessage(t('errorMessage'));
         throw new Error(`Response status: ${response.status}`);
       }
     } catch (error) {
       console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <FadeInSection customClass={`${styles.contact} main-layout`} id="contact">
-      <h2 className={`${styles.title} main-title`}>Me contacter.</h2>
+      <h2 className={`${styles.title} main-title`}>{t('title')}</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         {isSuccess ? (
           // Message
@@ -91,7 +96,7 @@ function Contact() {
                   onChange={handleChange}
                   type="text"
                   name="lastname"
-                  placeholder="Nom"
+                  placeholder={t('placeholder.lastname')}
                   id="lastname"
                   maxLength={100}
                   required
@@ -106,7 +111,7 @@ function Contact() {
                   onChange={handleChange}
                   type="text"
                   name="firstname"
-                  placeholder="Prénom"
+                  placeholder={t('placeholder.firstname')}
                   id="firstname"
                   maxLength={100}
                   autoComplete="off"
@@ -122,7 +127,7 @@ function Contact() {
                   onChange={handleChange}
                   type="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder={t('placeholder.email')}
                   id="emailAdress"
                   maxLength={320}
                   autoComplete="off"
@@ -144,7 +149,7 @@ function Contact() {
                   onChange={handleChange}
                   type="tel"
                   name="phone"
-                  placeholder="Téléphone (facultatif)"
+                  placeholder={t('placeholder.phone')}
                   id="phone"
                   pattern="^(?:\+33|06)[0-9]{8}$"
                   maxLength={12}
@@ -161,7 +166,7 @@ function Contact() {
                   value={values.message}
                   onChange={handleChange}
                   name="message"
-                  placeholder="Ecrivez votre message"
+                  placeholder={t('messagePlaceholder')}
                   id="message"
                   autoComplete="off"
                   maxLength={500}
@@ -171,7 +176,7 @@ function Contact() {
             </div>
             <div>
               <button className={styles.button} type="submit">
-                Envoyer
+                {isLoading ? <Spinner /> : t('sendButton')}
               </button>
             </div>
           </>

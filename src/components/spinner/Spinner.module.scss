@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'animation';
+
+.loader {
+  width: 22px;
+  height: 22px;
+  border: 3px solid $white;
+  border-bottom-color: $whitesmoke;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spinnerRotation 1s linear infinite;
+}
