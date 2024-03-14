@@ -1,16 +1,10 @@
 {
-  "socials": {
-    "githubAriaLabel": "Profil GitHub de Elisabeth Faujour",
-    "linkedinAriaLabel": "Profil LinkedIn de Elisabeth Faujour",
-    "emailAriaLabel": "Envoyer un e-mail à Elisabeth Faujour"
-  },
-  "infos": {
-    "jobTitle": "Développeuse Web React | Next.js | Node.js",
-    "resumeButton": "Mon CV",
-    "resumeAriaLabel": "Télécharger mon CV",
-    "resumeTitle": "Télécharger mon CV"
-  },
-  "scrollArrow": {
-    "ariaLabel": "Faire défiler vers le bas jusqu'à la section A propos"
-  }
+  "githubAriaLabel": "Profil GitHub de Elisabeth Faujour",
+  "linkedinAriaLabel": "Profil LinkedIn de Elisabeth Faujour",
+  "emailAriaLabel": "Envoyer un e-mail à Elisabeth Faujour",
+  "jobTitle": "Développeuse Web React | Next.js | Node.js",
+  "resumeButton": "Mon CV",
+  "resumeAriaLabel": "Télécharger mon CV",
+  "resumeTitle": "Télécharger mon CV",
+  "scrollArrowAriaLabel": "Faire défiler vers le bas jusqu'à la section A propos"
 }

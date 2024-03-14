@@ -1,13 +1,18 @@
-import FadeInSection from '../animations/FadeInSection/FadeInSection';
+import useTranslation from 'next-translate/useTranslation';
 import AnimeCat from './animeCat/AnimeCat';
-import { Github } from 'react-bootstrap-icons';
-import { Linkedin } from 'react-bootstrap-icons';
-import { EnvelopeFill } from 'react-bootstrap-icons';
-import { Download } from 'react-bootstrap-icons';
-import styles from './Home.module.scss';
 import ScrollArrow from './scrollArrow/ScrollArrow';
+import FadeInSection from '../animations/FadeInSection/FadeInSection';
+import {
+  Github,
+  Linkedin,
+  EnvelopeFill,
+  Download,
+} from 'react-bootstrap-icons';
+import styles from './Home.module.scss';
 
 function Home() {
+  // t function for translation form the 'header' json file
+  const { t } = useTranslation('home');
   return (
     <FadeInSection customClass={styles.home} id="home">
       <ScrollArrow />
@@ -18,7 +23,7 @@ function Home() {
               className={styles.link}
               href="https://github.com/ElisabethFjr"
               target="_blank"
-              aria-label="Profil GitHub de Elisabeth Faujour"
+              aria-label={t('githubAriaLabel')}
             >
               <Github />
             </a>
@@ -26,14 +31,14 @@ function Home() {
               className={styles.link}
               href="https://www.linkedin.com/in/elisabeth-faujour/"
               target="_blank"
-              aria-label="Profil LinkedIn de Elisabeth Faujour"
+              aria-label={t('linkedinAriaLabel')}
             >
               <Linkedin />
             </a>
             <a
               className={styles.link}
               href="mailto:efaujour@gmail.com"
-              aria-label="Envoyer un e-mail à Elisabeth Faujour"
+              aria-label={t('emailAriaLabel')}
             >
               <EnvelopeFill />
             </a>
@@ -41,18 +46,16 @@ function Home() {
           <div className={styles.infos}>
             <div>
               <h1 className={styles.name}>Elisabeth FAUJOUR</h1>
-              <h2 className={styles.job}>
-                Développeuse Web React | Next.js | Node.js
-              </h2>
+              <h2 className={styles.job}>{t('jobTitle')}</h2>
             </div>
             <a
               className={styles.resume}
               href="/docs/Elisabeth_FAUJOUR_CV.pdf"
               download="Elisabeth_FAUJOUR_CV.pdf"
-              aria-label="Télécharger mon CV"
-              title="Télécharger mon CV"
+              aria-label={t('resumeAriaLabel')}
+              title={t('resumeTitle')}
             >
-              <Download size={16} /> Mon CV
+              <Download size={16} /> {t('resumeButton')}
             </a>
           </div>
         </div>
