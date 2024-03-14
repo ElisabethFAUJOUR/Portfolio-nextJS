@@ -44,5 +44,6 @@
       "imageSrc": "/images/portfolio.webp",
       "tags": ["Next.js", "Typescript", "SCSS", "Nodemailer"]
     }
-  ]
+  ],
+  "button": "See More"
 }

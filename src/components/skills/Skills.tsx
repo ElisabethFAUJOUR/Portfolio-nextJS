@@ -5,14 +5,13 @@ import useTranslation from 'next-translate/useTranslation';
 import { SkillsSection } from '@/@types';
 
 function Skills() {
-  // t function for translation form the 'career' json file
+  // t function for translation form the 'skills' json file
   const { t } = useTranslation('skills');
   const skillsSections: SkillsSection[] = t(
     'skillsSections',
     {},
     { returnObjects: true }
   );
-  console.log(skillsSections);
 
   return (
     <FadeInSection customClass={`${styles.skills} main-layout`} id="skills">
