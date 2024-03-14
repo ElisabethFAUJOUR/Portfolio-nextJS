@@ -1,8 +1,11 @@
 {
-  "languageSelect": {
-    "aria-label": "Change Language"
+  "logo": {
+    "aria_label": "Lien vers la page d'accueil"
   },
-  "navLinks": [
+  "language_select": {
+    "aria_label": "Change Language"
+  },
+  "nav_links": [
     { "name": "Home", "id": "home" },
     { "name": "About", "id": "about" },
     { "name": "Career", "id": "career" },
@@ -10,8 +13,8 @@
     { "name": "Projects", "id": "projects" },
     { "name": "Contact", "id": "contact" }
   ],
-  "burgerMenu": {
-    "aria-label": "Button to open the Hamburger Menu",
+  "burger_menu": {
+    "aria_label": "Button to open the Hamburger Menu",
     "title": "Menu"
   }
 }

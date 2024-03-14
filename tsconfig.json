@@ -23,11 +23,11 @@
   },
   "include": [
     "next-env.d.ts",
+    "**/*.js",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/api/contact/route.tsx",
-    "src/lib/i18n.js",
   ],
   "exclude": ["node_modules"],
 }

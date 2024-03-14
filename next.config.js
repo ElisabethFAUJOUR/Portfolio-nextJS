@@ -1,14 +1,15 @@
-/** @type {import('next').NextConfig} */
+const path = require('path');
+const nextTranslate = require('next-translate-plugin');
 
-const path = require('path')
 const nextConfig = {
-    i18n: {
-        locales: ['fr', 'en'],
-        defaultLocale: 'fr',
-    },
     sassOptions: {
         includePaths: [path.join(__dirname, 'src/styles')],
     },
 };
-module.exports = nextConfig;
 
+module.exports = nextTranslate({
+    webpack: (config, { isServer, webpack }) => {
+        return config;
+    },
+    ...nextConfig,
+});

@@ -1,17 +1,16 @@
+import useTranslation from 'next-translate/useTranslation';
 import NavBar from './NavBar/NavBar';
 import Image from 'next/image';
-import styles from './Header.module.scss';
 import LanguageSelect from './LanguageSelect/LanguageSelect';
+import styles from './Header.module.scss';
 
 function Header() {
+  // t function for translation form the 'header' json file
+  const { t } = useTranslation('header');
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <a
-          className={styles.logo}
-          href="#"
-          aria-label="Lien vers la page d'accueil"
-        >
+        <a className={styles.logo} href="#" aria-label={t('logo.aria_label')}>
           <div className={styles.img}>
             <Image
               src="/images/logocat.webp"
@@ -23,7 +22,7 @@ function Header() {
             />
           </div>
         </a>
-        {/* <LanguageSelect /> */}
+        <LanguageSelect />
       </div>
       <NavBar />
     </header>

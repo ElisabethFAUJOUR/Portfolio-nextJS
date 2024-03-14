@@ -2,14 +2,12 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { i18n } from '@/lib/i18n';
+import { locales } from '../../../../i18n';
 import styles from './LanguageSelect.module.scss';
 import { Globe } from 'react-bootstrap-icons';
 
 function LanguageSelect() {
   const [selectedLanguage, setSelectedLanguage] = useState<string>('fr');
-
-  const { locales } = i18n;
 
   const handleLanguageChange = (language: string) => {
     setSelectedLanguage(language);

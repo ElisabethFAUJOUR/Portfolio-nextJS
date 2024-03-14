@@ -1,8 +1,11 @@
 {
-  "languageSelect": {
-    "aria-label": "Changer la langue"
+  "logo": {
+    "aria_label": "Link to Home Page"
   },
-  "navLinks": [
+  "language_select": {
+    "aria_label": "Changer la langue"
+  },
+  "nav_links": [
     { "name": "Home", "id": "home" },
     { "name": "A Propos", "id": "about" },
     { "name": "Mon Parcours", "id": "career" },
@@ -10,8 +13,8 @@
     { "name": "Projets", "id": "projects" },
     { "name": "Contact", "id": "contact" }
   ],
-  "burgerMenu": {
-    "aria-label": "Bouton pour ouvrir le Menu Hamburger",
+  "burger_menu": {
+    "aria_label": "Bouton pour ouvrir le Menu Hamburger",
     "title": "Menu"
   }
 }
