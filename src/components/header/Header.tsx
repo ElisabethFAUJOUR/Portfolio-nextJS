@@ -7,6 +7,7 @@ import styles from './Header.module.scss';
 function Header() {
   // t function for translation form the 'header' json file
   const { t } = useTranslation('header');
+
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>

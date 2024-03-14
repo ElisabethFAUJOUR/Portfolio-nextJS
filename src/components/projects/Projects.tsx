@@ -2,12 +2,12 @@ import useTranslation from 'next-translate/useTranslation';
 import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import ProjectCard from './projectCard/ProjectCard';
 import styles from './Projects.module.scss';
-import { Projects } from '@/@types';
+import { Project } from '@/@types';
 
 function Projects() {
   // t function for translation form the 'projects' json file
   const { t } = useTranslation('projects');
-  const projects: Projects[] = t('projects', {}, { returnObjects: true });
+  const projects: Project[] = t('projects', {}, { returnObjects: true });
 
   return (
     <FadeInSection customClass={`${styles.projects} main-layout`} id="projects">

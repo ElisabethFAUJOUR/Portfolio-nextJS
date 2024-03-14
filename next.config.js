@@ -1,15 +1,8 @@
 const path = require('path');
 const nextTranslate = require('next-translate-plugin');
 
-const nextConfig = {
+module.exports = nextTranslate({
     sassOptions: {
         includePaths: [path.join(__dirname, 'src/styles')],
     },
-};
-
-module.exports = nextTranslate({
-    webpack: (config, { isServer, webpack }) => {
-        return config;
-    },
-    ...nextConfig,
 });

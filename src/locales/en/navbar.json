@@ -1,0 +1,12 @@
+{
+  "burgerMenuAriaLabel": "Button to open the Hamburger Menu",
+  "burgerMenuTitle": "Menu",
+  "navLinks": [
+    { "name": "Home", "id": "home" },
+    { "name": "About", "id": "about" },
+    { "name": "Career", "id": "career" },
+    { "name": "Skills", "id": "skills" },
+    { "name": "Projects", "id": "projects" },
+    { "name": "Contact", "id": "contact" }
+  ]
+}

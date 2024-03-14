@@ -1,16 +1,4 @@
 {
   "logoAriaLabel": "Link to Home Page",
-  "languageSelectAriaLabel": "Change Language",
-  "navLinks": [
-    { "name": "Home", "id": "home" },
-    { "name": "About", "id": "about" },
-    { "name": "Career", "id": "career" },
-    { "name": "Skills", "id": "skills" },
-    { "name": "Projects", "id": "projects" },
-    { "name": "Contact", "id": "contact" }
-  ],
-  "burgerMenuAriaLabel": {
-    "": "Button to open the Hamburger Menu",
-    "title": "Menu"
-  }
+  "languageSelectAriaLabel": "Change Language"
 }

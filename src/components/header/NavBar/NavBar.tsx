@@ -3,14 +3,15 @@
 import useTranslation from 'next-translate/useTranslation';
 import { useEffect, useState } from 'react';
 import { List, X } from 'react-bootstrap-icons';
-import { NavLinks } from '@/@types';
+import { NavLink } from '@/@types'; // Importation de l'interface NavLink
 import styles from './NavBar.module.scss';
 
 function NavBar() {
-  // t function for translation form the 'header' json file
-  const { t } = useTranslation('header');
+  // t function for translation form the 'navbar' json file
+  const { t } = useTranslation('navbar');
   // Get all nav links from 'header' json file
-  const navLinks: NavLinks[] = t('navLinks', {}, { returnObjects: true });
+  const navLinks: NavLink[] = t('navLinks', {}, { returnObjects: true });
+  console.log(navLinks);
 
   // State variable for the Burger Menu
   const [isOpen, setIsOpen] = useState<boolean>(false);

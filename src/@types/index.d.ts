@@ -1,8 +1,7 @@
-export interface NavLinks {
+export interface NavLink {
   name: string;
   id: string;
 }
-
 export interface CareerSection {
   title: string;
   date: string;
@@ -20,7 +19,7 @@ export interface SkillsSection {
   elems: Skill[];
 }
 
-export interface Projects {
+export interface Project {
   title: string;
   description: string;
   link: string;
