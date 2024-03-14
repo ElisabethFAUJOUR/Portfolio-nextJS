@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import FadeInSection from '../animations/FadeInSection/FadeInSection';
+import useTranslation from 'next-translate/useTranslation';
 import { Github } from 'react-bootstrap-icons';
 import { Linkedin } from 'react-bootstrap-icons';
 import { EnvelopeFill } from 'react-bootstrap-icons';
@@ -7,6 +6,9 @@ import styles from './Footer.module.scss';
 import FadeInDiv from '../animations/FadeInDiv/FadeInDiv';
 
 function Footer() {
+  // t function for translation form the 'footer' json file
+  const { t } = useTranslation('footer');
+
   return (
     <footer className={styles.footer}>
       <FadeInDiv customClass={styles.socials}>
@@ -15,7 +17,7 @@ function Footer() {
           href="https://github.com/ElisabethFjr"
           target="_blank"
           rel="noopener noreferrer nofollow"
-          aria-label="Profil GitHub de Elisabeth Faujour"
+          aria-label={t('socials.github_aria_label')}
         >
           <Github />
         </a>
@@ -24,7 +26,7 @@ function Footer() {
           href="https://www.linkedin.com/in/elisabeth-faujour/"
           target="_blank"
           rel="noopener noreferrer nofollow"
-          aria-label="Profil LinkedIn de Elisabeth Faujour"
+          aria-label={t('linkedinAriaLabel')}
         >
           <Linkedin />
         </a>
@@ -32,16 +34,14 @@ function Footer() {
           className={styles.link}
           href="mailto:efaujour@gmail.com"
           rel="noopener noreferrer nofollow"
-          aria-label="Envoyer un e-mail à Elisabeth Faujour"
+          aria-label={t('emailAriaLabel')}
         >
           <EnvelopeFill />
         </a>
       </FadeInDiv>
+      <p className={styles.text}>{t('rights')}</p>
       <p className={styles.text}>
-        © 2024 Elisabeth FAUJOUR - Tous droits réservés.
-      </p>
-      <p className={styles.text}>
-        Réalisé avec <span className={styles.bold}>NextJS</span>.
+        {t('madeWith')} <span className={styles.bold}>{t('next')}</span>.
       </p>
     </footer>
   );

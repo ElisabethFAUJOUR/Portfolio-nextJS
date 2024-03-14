@@ -2,15 +2,15 @@
 
 import useTranslation from 'next-translate/useTranslation';
 import { useEffect, useState } from 'react';
-import { navLinks } from '@/data/data';
 import { List, X } from 'react-bootstrap-icons';
+import { NavLinks } from '@/@types';
 import styles from './NavBar.module.scss';
 
 function NavBar() {
   // t function for translation form the 'header' json file
   const { t } = useTranslation('header');
   // Get all nav links from 'header' json file
-  const navLinkst = t('nav_links', {}, { returnObjects: true });
+  const navLinks: NavLinks[] = t('navLinks', {}, { returnObjects: true });
 
   // State variable for the Burger Menu
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -63,8 +63,8 @@ function NavBar() {
         className={styles.burger}
         type="button"
         onClick={toggleBurgerMenu}
-        aria-label={t('burger_menu.aria_label')}
-        title={t('burger_menu.title')}
+        aria-label={t('burgerMenuAriaLabel')}
+        title={t('burgerMenuTitle')}
       >
         {isOpen ? <X /> : <List />}
       </button>

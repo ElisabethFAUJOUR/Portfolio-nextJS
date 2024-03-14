@@ -3,7 +3,7 @@ module.exports = {
   defaultLocale: 'fr',
   localeDetection: false,
   pages: {
-    '/': ['header', 'home', "about", 'career', 'skills', 'projects', 'contact'],
+    '/': ['header', 'footer', 'home', "about", 'career', 'skills', 'projects', 'contact'],
   },
   // Function returning a Promise with the JSON file
   loadLocaleFrom: (lang, ns) =>

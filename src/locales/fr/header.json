@@ -1,11 +1,7 @@
 {
-  "logo": {
-    "aria_label": "Link to Home Page"
-  },
-  "language_select": {
-    "aria_label": "Changer la langue"
-  },
-  "nav_links": [
+  "logoAriaLabel": "Lien vers la page Home",
+  "languageSelectAriaLabel": "Changer la langue",
+  "navLinks": [
     { "name": "Home", "id": "home" },
     { "name": "A Propos", "id": "about" },
     { "name": "Mon Parcours", "id": "career" },
@@ -13,8 +9,6 @@
     { "name": "Projets", "id": "projects" },
     { "name": "Contact", "id": "contact" }
   ],
-  "burger_menu": {
-    "aria_label": "Bouton pour ouvrir le Menu Hamburger",
-    "title": "Menu"
-  }
+  "burgerMenuAriaLabel": "Bouton pour ouvrir le Menu Hamburger",
+  "burgerMenuTitle": "Menu"
 }

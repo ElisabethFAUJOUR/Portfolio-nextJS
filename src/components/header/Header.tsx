@@ -10,7 +10,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <a className={styles.logo} href="#" aria-label={t('logo.aria_label')}>
+        <a className={styles.logo} href="#" aria-label={t('logoAriaLabel')}>
           <div className={styles.img}>
             <Image
               src="/images/logocat.webp"

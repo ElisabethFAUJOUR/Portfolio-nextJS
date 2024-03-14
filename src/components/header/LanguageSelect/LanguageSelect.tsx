@@ -1,5 +1,6 @@
 'use client';
 
+import useTranslation from 'next-translate/useTranslation';
 import { useState } from 'react';
 import Link from 'next/link';
 import { locales } from '../../../../i18n';
@@ -7,6 +8,9 @@ import styles from './LanguageSelect.module.scss';
 import { Globe } from 'react-bootstrap-icons';
 
 function LanguageSelect() {
+  // t function for translation form the 'header' json file
+  const { t } = useTranslation('header');
+
   const [selectedLanguage, setSelectedLanguage] = useState<string>('fr');
 
   const handleLanguageChange = (language: string) => {
@@ -26,7 +30,7 @@ function LanguageSelect() {
               href={'/'}
               locale={locale}
               onClick={() => handleLanguageChange(locale)}
-              aria-label="Changer le language"
+              aria-label={t('logoAriaLabel')}
             >
               {locale.toUpperCase()}
             </Link>
