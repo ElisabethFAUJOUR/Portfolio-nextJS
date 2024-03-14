@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { availableLocales } from '@/lib/i18n';
+import { i18n } from '@/lib/i18n';
 import styles from './LanguageSelect.module.scss';
 import { Globe } from 'react-bootstrap-icons';
 
 function LanguageSelect() {
   const [selectedLanguage, setSelectedLanguage] = useState<string>('fr');
+
+  const { locales } = i18n;
 
   const handleLanguageChange = (language: string) => {
     setSelectedLanguage(language);
@@ -16,7 +18,7 @@ function LanguageSelect() {
   return (
     <div className={styles.language}>
       <ul className={styles.list}>
-        {availableLocales.map((locale) => (
+        {locales.map((locale) => (
           <li
             key={locale}
             className={`${styles.locale} ${selectedLanguage === locale && styles.active}`}
