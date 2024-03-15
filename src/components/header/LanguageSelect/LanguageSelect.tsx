@@ -9,7 +9,7 @@ import { Globe } from 'react-bootstrap-icons';
 
 function LanguageSelect() {
   // t function for translation form the 'header' json file
-  const { t } = useTranslation('header');
+  const { t, lang } = useTranslation('header');
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>('fr');
 
@@ -29,8 +29,9 @@ function LanguageSelect() {
             <Link
               href={'/'}
               locale={locale}
+              key={locale}
               onClick={() => handleLanguageChange(locale)}
-              aria-label={t('logoAriaLabel')}
+              aria-label={t('languageSelectAriaLabel')}
             >
               {locale.toUpperCase()}
             </Link>

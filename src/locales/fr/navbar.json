@@ -1,6 +1,4 @@
 {
-  "burgerMenuAriaLabel": "Bouton pour ouvrir le Menu Hamburger",
-  "burgerMenuTitle": "Menu",
   "navLinks": [
     { "name": "Home", "id": "home" },
     { "name": "A Propos", "id": "about" },

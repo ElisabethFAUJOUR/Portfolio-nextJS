@@ -1,75 +1,30 @@
 'use client';
 
-import useTranslation from 'next-translate/useTranslation';
-import { useEffect, useState } from 'react';
-import { List, X } from 'react-bootstrap-icons';
-import { NavLink } from '@/@types';
-import { navLinks } from '@/data/data';
+import { useState } from 'react';
+import BurgerMenu from './BurgerMenu/BurgerMenu';
 import styles from './NavBar.module.scss';
+import NavLinks from './NavLinks/NavLinks';
 
-function NavBar() {
-  // t function for translation form the 'navbar' json file
-  const { t } = useTranslation('navbar');
-  // Get all nav links from 'header' json file
-  // const navLinks: NavLink[] = t('navLinks', {}, { returnObjects: true });
-  // console.log(navLinks);
+interface NavBarProps {
+  burgerAriaLabel: string;
+  burgertitle: string;
+}
 
+function NavBar({ burgerAriaLabel, burgertitle }: NavBarProps) {
   // State variable for the Burger Menu
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  // Toggle the burger menu
-  const toggleBurgerMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation();
-    setIsOpen(!isOpen);
-  };
-
-  // Close the burger menu
-  const closeBurgerMenu = () => {
-    setIsOpen(false);
-  };
-
-  // Add a click event listener to close the menu
-  useEffect(() => {
-    document.body.addEventListener('click', closeBurgerMenu);
-
-    return () => {
-      document.body.removeEventListener('click', closeBurgerMenu);
-    };
-  }, []);
-
-  // Smooth scroll on link click
-  const handleClick = (id: string) => {
-    const targetElement = document.getElementById(id);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-      if (isOpen) {
-        closeBurgerMenu();
-      }
-    }
-  };
 
   return (
     <>
       <nav className={`${styles.navbar} ${isOpen ? styles.active : ''}`}>
-        <ul className={styles.list}>
-          {navLinks.map((link) => (
-            <li key={link.name} className={styles.link}>
-              <a key={link.name} onClick={() => handleClick(link.id)}>
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <NavLinks />
       </nav>
-      <button
-        className={styles.burger}
-        type="button"
-        onClick={toggleBurgerMenu}
-        aria-label={t('burgerMenuAriaLabel')}
-        title={t('burgerMenuTitle')}
-      >
-        {isOpen ? <X /> : <List />}
-      </button>
+      <BurgerMenu
+        isOpen={isOpen}
+        ariaLabel={burgerAriaLabel}
+        title={burgertitle}
+        setIsOpen={setIsOpen}
+      />
     </>
   );
 }

@@ -1,4 +1,6 @@
 {
   "logoAriaLabel": "Lien vers la page Home",
-  "languageSelectAriaLabel": "Changer la langue"
+  "languageSelectAriaLabel": "Changer la langue",
+  "burgerMenuAriaLabel": "Bouton pour ouvrir le Menu Hamburger",
+  "burgerMenuTitle": "Menu"
 }

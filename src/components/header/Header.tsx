@@ -25,7 +25,10 @@ function Header() {
         </a>
         <LanguageSelect />
       </div>
-      <NavBar />
+      <NavBar
+        burgerAriaLabel={t('burgerMenuAriaLabel')}
+        burgertitle={t('burgerMenuTitle')}
+      />
     </header>
   );
 }
