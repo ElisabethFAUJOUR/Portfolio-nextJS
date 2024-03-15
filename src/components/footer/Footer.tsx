@@ -1,13 +1,13 @@
-import useTranslation from 'next-translate/useTranslation';
 import { Github } from 'react-bootstrap-icons';
 import { Linkedin } from 'react-bootstrap-icons';
 import { EnvelopeFill } from 'react-bootstrap-icons';
 import styles from './Footer.module.scss';
 import FadeInDiv from '../animations/FadeInDiv/FadeInDiv';
+import { getDictionary } from '@/utils/locales';
 
-function Footer() {
-  // t function for translation form the 'footer' json file
-  const { t } = useTranslation('footer');
+async function Footer({ locale }: { locale: string }) {
+  // Get the 'footer.json' file translations
+  const footer = await getDictionary(locale, 'footer');
 
   return (
     <footer className={styles.footer}>
@@ -17,7 +17,7 @@ function Footer() {
           href="https://github.com/ElisabethFjr"
           target="_blank"
           rel="noopener noreferrer nofollow"
-          aria-label={t('socials.github_aria_label')}
+          aria-label={footer.github_aria_label}
         >
           <Github />
         </a>
@@ -26,7 +26,7 @@ function Footer() {
           href="https://www.linkedin.com/in/elisabeth-faujour/"
           target="_blank"
           rel="noopener noreferrer nofollow"
-          aria-label={t('linkedinAriaLabel')}
+          aria-label={footer.linkedinAriaLabel}
         >
           <Linkedin />
         </a>
@@ -34,14 +34,14 @@ function Footer() {
           className={styles.link}
           href="mailto:efaujour@gmail.com"
           rel="noopener noreferrer nofollow"
-          aria-label={t('emailAriaLabel')}
+          aria-label={footer.emailAriaLabel}
         >
           <EnvelopeFill />
         </a>
       </FadeInDiv>
-      <p className={styles.text}>{t('rights')}</p>
+      <p className={styles.text}>{footer.rights}</p>
       <p className={styles.text}>
-        {t('madeWith')} <span className={styles.bold}>{t('next')}</span>.
+        {footer.madeWith} <span className={styles.bold}>{footer.next}</span>.
       </p>
     </footer>
   );

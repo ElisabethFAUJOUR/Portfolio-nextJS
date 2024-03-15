@@ -1,17 +1,13 @@
 import SkillCard from './skillCard/SkillCard';
 import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import styles from './Skills.module.scss';
-import useTranslation from 'next-translate/useTranslation';
 import { SkillsSection } from '@/@types';
+import { getDictionary } from '@/utils/locales';
 
-function Skills() {
-  // t function for translation form the 'skills' json file
-  const { t } = useTranslation('skills');
-  const skillsSections: SkillsSection[] = t(
-    'skillsSections',
-    {},
-    { returnObjects: true }
-  );
+async function Skills({ locale }: { locale: string }) {
+  // Get the 'skills.json' file translations
+  const skills = await getDictionary(locale, 'skills');
+  const skillsSections: SkillsSection[] = skills.skillsSections;
 
   return (
     <FadeInSection customClass={`${styles.skills} main-layout`} id="skills">

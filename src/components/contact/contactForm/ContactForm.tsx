@@ -55,7 +55,6 @@ function ContactForm({
     const formData = new FormData(event.currentTarget);
     // FormData Json Object
     const formDataObject = Object.fromEntries(formData.entries());
-    console.log(formDataObject);
 
     try {
       const response = await fetch('/api/contact', {

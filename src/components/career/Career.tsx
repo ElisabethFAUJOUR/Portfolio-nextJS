@@ -1,4 +1,4 @@
-import useTranslation from 'next-translate/useTranslation';
+import { getDictionary } from '@/utils/locales';
 import FadeInDiv from '../animations/FadeInDiv/FadeInDiv';
 import FadeInSection from '../animations/FadeInSection/FadeInSection';
 import { CareerSection } from '@/@types';
@@ -8,18 +8,14 @@ import { BuildingFill } from 'react-bootstrap-icons';
 import { MortarboardFill } from 'react-bootstrap-icons';
 import styles from './Career.module.scss';
 
-function Career() {
-  // t function for translation form the 'career' json file
-  const { t } = useTranslation('career');
-  const careerSection: CareerSection[] = t(
-    'careerSection',
-    {},
-    { returnObjects: true }
-  );
+async function Career({ locale }: { locale: string }) {
+  // Get the 'career.json' file translations
+  const career = await getDictionary(locale, 'career');
+  const careerSection: CareerSection[] = career.careerSection;
 
   return (
     <FadeInSection customClass={`${styles.career} main-layout`} id="career">
-      <h2 className={`${styles.title} main-title`}>{t('title')}</h2>
+      <h2 className={`${styles.title} main-title`}>{career.title}</h2>
       <div className={styles.timeline}>
         {careerSection.map((career, index) => (
           <FadeInDiv key={index} customClass={styles.container}>

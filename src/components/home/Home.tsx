@@ -1,4 +1,3 @@
-import useTranslation from 'next-translate/useTranslation';
 import AnimeCat from './animeCat/AnimeCat';
 import ScrollArrow from './scrollArrow/ScrollArrow';
 import FadeInSection from '../animations/FadeInSection/FadeInSection';
@@ -9,13 +8,14 @@ import {
   Download,
 } from 'react-bootstrap-icons';
 import styles from './Home.module.scss';
+import { getDictionary } from '@/utils/locales';
 
-function Home() {
-  // t function for translation form the 'home' json file
-  const { t } = useTranslation('home');
+async function Home({ locale }: { locale: string }) {
+  // Get the 'home.json' file translations
+  const home = await getDictionary(locale, 'home');
   return (
     <FadeInSection customClass={styles.home} id="home">
-      <ScrollArrow ariaLabel={t('scrollArrowAriaLabel')} />
+      <ScrollArrow ariaLabel={home.scrollArrowAriaLabel} />
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.socials}>
@@ -23,7 +23,7 @@ function Home() {
               className={styles.link}
               href="https://github.com/ElisabethFjr"
               target="_blank"
-              aria-label={t('githubAriaLabel')}
+              aria-label={home.githubAriaLabel}
             >
               <Github />
             </a>
@@ -31,14 +31,14 @@ function Home() {
               className={styles.link}
               href="https://www.linkedin.com/in/elisabeth-faujour/"
               target="_blank"
-              aria-label={t('linkedinAriaLabel')}
+              aria-label={home.linkedinAriaLabel}
             >
               <Linkedin />
             </a>
             <a
               className={styles.link}
               href="mailto:efaujour@gmail.com"
-              aria-label={t('emailAriaLabel')}
+              aria-label={home.emailAriaLabel}
             >
               <EnvelopeFill />
             </a>
@@ -46,16 +46,16 @@ function Home() {
           <div className={styles.infos}>
             <div>
               <h1 className={styles.name}>Elisabeth FAUJOUR</h1>
-              <h2 className={styles.job}>{t('jobTitle')}</h2>
+              <h2 className={styles.job}>{home.jobTitle}</h2>
             </div>
             <a
               className={styles.resume}
               href="/docs/Elisabeth_FAUJOUR_CV.pdf"
               download="Elisabeth_FAUJOUR_CV.pdf"
-              aria-label={t('resumeAriaLabel')}
-              title={t('resumeTitle')}
+              aria-label={home.resumeAriaLabel}
+              title={home.resumeTitle}
             >
-              <Download size={16} /> {t('resumeButton')}
+              <Download size={16} /> {home.resumeButton}
             </a>
           </div>
         </div>

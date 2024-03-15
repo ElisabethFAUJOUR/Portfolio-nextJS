@@ -27,6 +27,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/api/contact/route.tsx",
+    "src/middleware.js",
+    "i18nConfig.js",
+    "src/utils/locales.js",
   ],
   "exclude": ["node_modules"],
 }

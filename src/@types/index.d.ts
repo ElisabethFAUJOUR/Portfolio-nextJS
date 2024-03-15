@@ -2,6 +2,7 @@ export interface NavLinkType {
   name: string;
   id: string;
 }
+
 export interface CareerSection {
   title: string;
   date: string;

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import useTranslation from 'next-translate/useTranslation';
 import { nanoid } from 'nanoid';
 import FadeInDiv from '@/components/animations/FadeInDiv/FadeInDiv';
 import styles from './ProjectCard.module.scss';
@@ -12,6 +11,7 @@ interface ProjectCardProps {
   link: string;
   imageSrc: string;
   tags: string[];
+  buttonText: string;
 }
 
 function ProjectCard({
@@ -20,9 +20,8 @@ function ProjectCard({
   link,
   imageSrc,
   tags,
+  buttonText,
 }: ProjectCardProps) {
-  // t function for translation form the 'projects' json file
-  const { t } = useTranslation('projects');
   return (
     <a
       className={`${styles.link}`}
@@ -59,7 +58,7 @@ function ProjectCard({
         </div>
         <div className={styles.overlay}>
           <button className={styles.button} type="button">
-            {t('button')}
+            {buttonText}
           </button>
         </div>
       </FadeInDiv>

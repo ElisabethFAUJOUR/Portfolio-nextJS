@@ -1,20 +1,19 @@
-import useTranslation from 'next-translate/useTranslation';
 import NavBar from './NavBar/NavBar';
 import Image from 'next/image';
 import LanguageSelect from './LanguageSelect/LanguageSelect';
 import { NavLinkType } from '@/@types';
 import styles from './Header.module.scss';
+import { getDictionary } from '@/utils/locales';
 
-function Header() {
-  // t function for translation form the 'header' json file
-  const { t } = useTranslation('header');
-  // Get all nav links from 'header' json file
-  const navLinks: NavLinkType[] = t('navLinks', {}, { returnObjects: true });
+async function Header({ locale }: { locale: string }) {
+  // Get the 'header.json' file translations
+  const header = await getDictionary(locale, 'header');
+  const navLinks: NavLinkType[] = header.navLinks;
 
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <a className={styles.logo} href="#" aria-label={t('logoAriaLabel')}>
+        <a className={styles.logo} href="#" aria-label={header.logoAriaLabel}>
           <div className={styles.img}>
             <Image
               src="/images/logocat.webp"
@@ -26,11 +25,11 @@ function Header() {
             />
           </div>
         </a>
-        <LanguageSelect />
+        <LanguageSelect arialabel={header.arialabel} />
       </div>
       <NavBar
-        burgerAriaLabel={t('burgerMenuAriaLabel')}
-        burgertitle={t('burgerMenuTitle')}
+        burgerAriaLabel={header.burgerMenuAriaLabel}
+        burgertitle={header.burgerMenuTitle}
         navLinks={navLinks}
       />
     </header>
