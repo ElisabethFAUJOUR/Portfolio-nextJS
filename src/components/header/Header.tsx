@@ -25,7 +25,7 @@ async function Header({ locale }: { locale: string }) {
             />
           </div>
         </a>
-        <LanguageSelect arialabel={header.arialabel} />
+        <LanguageSelect arialabel={header.arialabel} locale={locale} />
       </div>
       <NavBar
         burgerAriaLabel={header.burgerMenuAriaLabel}

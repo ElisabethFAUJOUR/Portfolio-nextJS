@@ -6,8 +6,15 @@ import { locales } from '@/utils/i18nConfig';
 import styles from './LanguageSelect.module.scss';
 import { Globe } from 'react-bootstrap-icons';
 
-function LanguageSelect({ arialabel }: { arialabel: string }) {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>('fr');
+function LanguageSelect({
+  arialabel,
+  locale,
+}: {
+  arialabel: string;
+  locale: string;
+}) {
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(locale);
+  console.log(selectedLanguage);
 
   const handleLanguageChange = (language: string) => {
     setSelectedLanguage(language);
