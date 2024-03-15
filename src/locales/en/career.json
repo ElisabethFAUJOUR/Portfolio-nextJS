@@ -1,0 +1,48 @@
+{
+  "title": "Career.",
+  "careerSection": [
+    {
+      "title": "Front-End Web Developer - End of training project",
+      "date": "September 2023 – October 2023",
+      "subtitle": "O'Journey - Interactive travel organization application",
+      "description": [
+        "Project completed in 1 month, in a team of 5 developers and based on SCRUM and AGILE methodologies.",
+        "Technologies: React, Redux, Typescript, SCSS, REST API.",
+        "Skills: MVC, SPA, Responsive Design, UX/UI, JWT Authentication, REST API, axios, Vercel, GitFlow, SEO, accessibility, OWASP recommendations."
+      ],
+      "location": "Ecole O'Clock (certified digital school)"
+    },
+    {
+      "title": "RNCP Level 5 Title 'Web and Mobile Web Developer'",
+      "date": "May – October 2023",
+      "subtitle": "Intensive training of 798 hours",
+      "description": [
+        "3 months of Skills foundation",
+        "1 month of React Specialization",
+        "1 month of professional project in team"
+      ],
+      "location": "Ecole O'Clock (certified digital school)"
+    },
+    {
+      "title": "Self-employed Physiotherapist",
+      "date": "July 2016 – April 2023",
+      "description": [
+        "Replacement in Reunion Island for 6 months post-diploma",
+        "Assistant-collaborator in group practice with a mixed practice (clinic/home) in the Grenoble region.",
+        "Specialization in McKenzie Method of Diagnosis and Mechanical Therapy",
+        "Mastery of clinic management software and teletransmission: VEGA, Topaze, Kiné+4000, Doctolib",
+        "Professional accounting."
+      ]
+    },
+    {
+      "title": "State Diploma of Physiotherapist",
+      "date": "2013 – 2016",
+      "location": "Physiotherapy School of CHU Grenoble"
+    },
+    {
+      "title": "PACES (First Year Common to Health Studies)",
+      "date": "2011 – 2013",
+      "location": "University Grenoble Alps - UFR Medicine"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "logoAriaLabel": "Lien vers la page Home",
+  "languageSelectAriaLabel": "Changer la langue",
+  "burgerMenuAriaLabel": "Bouton pour ouvrir le Menu Hamburger",
+  "burgerMenuTitle": "Menu",
+  "navLinks": [
+    { "name": "Home", "id": "home" },
+    { "name": "A Propos", "id": "about" },
+    { "name": "Mon Parcours", "id": "career" },
+    { "name": "Compétences", "id": "skills" },
+    { "name": "Projets", "id": "projects" },
+    { "name": "Contact", "id": "contact" }
+  ]
+}

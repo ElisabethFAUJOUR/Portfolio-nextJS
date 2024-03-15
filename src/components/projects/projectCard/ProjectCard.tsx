@@ -11,6 +11,7 @@ interface ProjectCardProps {
   link: string;
   imageSrc: string;
   tags: string[];
+  buttonText: string;
 }
 
 function ProjectCard({
@@ -19,6 +20,7 @@ function ProjectCard({
   link,
   imageSrc,
   tags,
+  buttonText,
 }: ProjectCardProps) {
   return (
     <a
@@ -56,7 +58,7 @@ function ProjectCard({
         </div>
         <div className={styles.overlay}>
           <button className={styles.button} type="button">
-            Voir plus
+            {buttonText}
           </button>
         </div>
       </FadeInDiv>

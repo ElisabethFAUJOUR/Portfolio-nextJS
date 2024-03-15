@@ -1,0 +1,14 @@
+{
+  "title": "Contact me.",
+  "placeholder": {
+    "lastname": "Lastname",
+    "firstname": "Firstname",
+    "email": "Email",
+    "phone": "Phone (optional)"
+  },
+  "errorEmailMessage": "Please enter a valid email.",
+  "errorMessage": "Oops, an error occurred while sending the message. Please try again later.",
+  "successMessage": "The message has been sent successfully! I will get back to you as soon as possible. See you soon!",
+  "sendButton": "Send",
+  "messagePlaceholder": "Write your message"
+}

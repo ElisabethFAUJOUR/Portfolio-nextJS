@@ -3,7 +3,11 @@
 import { ChevronDoubleDown } from 'react-bootstrap-icons';
 import styles from './ScrollArrow.module.scss';
 
-function ScrollArrow() {
+interface ScrollArrowProps {
+  ariaLabel: string;
+}
+
+function ScrollArrow({ ariaLabel }: ScrollArrowProps) {
   const handleClick = () => {
     const targetElement = document.getElementById('about');
     if (targetElement) {
@@ -13,10 +17,7 @@ function ScrollArrow() {
 
   return (
     <div className={styles.arrow}>
-      <a
-        onClick={handleClick}
-        aria-label="Faire défiler vers le bas jusqu'à la section A propos"
-      >
+      <a onClick={handleClick} aria-label={ariaLabel}>
         <ChevronDoubleDown />
       </a>
     </div>

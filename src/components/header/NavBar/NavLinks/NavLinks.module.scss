@@ -1,0 +1,44 @@
+@import 'variables';
+
+.list {
+  display: flex;
+  gap: 2rem;
+  .link {
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      width: 80%;
+      height: 1px;
+      background-color: $violet;
+      border-radius: 0.4rem;
+      margin: 0 auto;
+      transition: transform 0.3s ease-in-out;
+      transform: scaleX(0);
+      transform-origin: center;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+// Responsive screen < 1199px
+@media (max-width: 1199px) {
+  .list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 3rem;
+    .link::after {
+      bottom: -5px;
+    }
+  }
+}

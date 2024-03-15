@@ -1,5 +1,10 @@
 @import 'variables';
 
+.button {
+  display: flex;
+  width: 100px;
+}
+
 .language {
   position: relative;
   width: 100px;

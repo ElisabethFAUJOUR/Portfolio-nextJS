@@ -1,0 +1,21 @@
+{
+  "title": "About.",
+  "paragraph1": "After 7 years as a self-employed Physiotherapist, I decided to step out of my comfort zone and explore new professional horizons, diving into the vast world of Web Development.",
+  "paragraph2": {
+    "part1": "Drawing on my healthcare background, I pay special attention to ",
+    "bold1": "accessibility",
+    "part2": " when creating my web applications, ensuring full inclusivity. My commitment translates into the development of ",
+    "bold2": "high-performing",
+    "part3": " digital solutions, centered around ",
+    "bold3": "user needs",
+    "part4": " and providing an optimal experience."
+  },
+  "paragraph3": {
+    "bold1": "Conscientious",
+    "part1": " and ",
+    "bold2": "detail-oriented",
+    "part2": ", I strive to produce ever-better results. With a natural affinity for UI Design, I leverage my ",
+    "bold3": "creativity",
+    "part3": " to craft intuitive and harmonious visual experiences."
+  }
+}

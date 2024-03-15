@@ -1,9 +1,10 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { Poppins, Roboto } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
-import '../styles/globals.scss';
+import '../../styles/globals.scss';
+import { locales } from '@/utils/i18nConfig';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -19,18 +20,26 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://elisabethfaujour.vercel.app/'),
 };
 
+export async function generateStaticParams() {
+  return locales.map((locale: string) => ({ locale }));
+}
+
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: {
+    locale: string;
+  };
 }) {
   return (
-    <html lang="fr">
+    <html lang={locale}>
       <body className={poppins.className}>
         <div className="container">
-          <Header />
+          <Header locale={locale} />
           <main className="main">{children}</main>
-          <Footer />
+          <Footer locale={locale} />
         </div>
       </body>
     </html>

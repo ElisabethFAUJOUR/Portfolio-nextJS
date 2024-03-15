@@ -1,17 +1,19 @@
 import NavBar from './NavBar/NavBar';
 import Image from 'next/image';
-import styles from './Header.module.scss';
 import LanguageSelect from './LanguageSelect/LanguageSelect';
+import { NavLinkType } from '@/@types';
+import styles from './Header.module.scss';
+import { getDictionary } from '@/utils/locales';
 
-function Header() {
+async function Header({ locale }: { locale: string }) {
+  // Get the 'header.json' file translations
+  const header = await getDictionary(locale, 'header');
+  const navLinks: NavLinkType[] = header.navLinks;
+
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <a
-          className={styles.logo}
-          href="#"
-          aria-label="Lien vers la page d'accueil"
-        >
+        <a className={styles.logo} href="#" aria-label={header.logoAriaLabel}>
           <div className={styles.img}>
             <Image
               src="/images/logocat.webp"
@@ -23,9 +25,13 @@ function Header() {
             />
           </div>
         </a>
-        {/* <LanguageSelect /> */}
+        <LanguageSelect arialabel={header.arialabel} locale={locale} />
       </div>
-      <NavBar />
+      <NavBar
+        burgerAriaLabel={header.burgerMenuAriaLabel}
+        burgertitle={header.burgerMenuTitle}
+        navLinks={navLinks}
+      />
     </header>
   );
 }

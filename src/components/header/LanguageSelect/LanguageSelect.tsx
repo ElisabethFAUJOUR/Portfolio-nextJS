@@ -2,12 +2,19 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { availableLocales } from '@/lib/i18n';
+import { locales } from '@/utils/i18nConfig';
 import styles from './LanguageSelect.module.scss';
 import { Globe } from 'react-bootstrap-icons';
 
-function LanguageSelect() {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>('fr');
+function LanguageSelect({
+  arialabel,
+  locale,
+}: {
+  arialabel: string;
+  locale: string;
+}) {
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(locale);
+  console.log(selectedLanguage);
 
   const handleLanguageChange = (language: string) => {
     setSelectedLanguage(language);
@@ -16,17 +23,18 @@ function LanguageSelect() {
   return (
     <div className={styles.language}>
       <ul className={styles.list}>
-        {availableLocales.map((locale) => (
+        {locales.map((locale) => (
           <li
             key={locale}
             className={`${styles.locale} ${selectedLanguage === locale && styles.active}`}
           >
             {selectedLanguage === locale && <Globe size={14} />}
             <Link
-              href={'/'}
+              href={`/${locale}`}
               locale={locale}
+              key={locale}
+              aria-label={arialabel}
               onClick={() => handleLanguageChange(locale)}
-              aria-label="Changer le language"
             >
               {locale.toUpperCase()}
             </Link>

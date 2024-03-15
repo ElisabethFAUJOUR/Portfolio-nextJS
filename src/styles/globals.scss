@@ -1,6 +1,9 @@
 @import 'reset';
 @import 'variables';
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: $bgVioletDark;
   color: $white;

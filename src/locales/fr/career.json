@@ -1,0 +1,48 @@
+{
+  "title": "Mon Parcours.",
+  "careerSection": [
+    {
+      "title": "Développeur Web Front-End - Projet de fin de formation",
+      "date": "Septembre 2023 – octobre 2023",
+      "subtitle": "O'Journey - Application d'organisation de voyage interactive",
+      "description": [
+        "Projet réalisé en 1 mois, en équipe de 5 développeurs et reposant sur les méthodologies SCRUM et AGILE.",
+        "Technos : React, Redux, Typescript, SCSS, API REST.",
+        "Compétences : MVC, SPA, Responsive Design, UX/UI, Authentification par JWT, API REST, axios, Vercel, GitFlow, SEO, accessibilité, recommandations OWASP."
+      ],
+      "location": "Ecole O'Clock (certifiée grande école du numérique)"
+    },
+    {
+      "title": "Titre RNCP Niveau 5 'Développeur Web et Web Mobile'",
+      "date": "Mai – Octobre 2023",
+      "subtitle": "Formation intensive de 798 heures",
+      "description": [
+        "3 mois de socle de Compétences",
+        "1 mois de Spécialisation React",
+        "1 mois de projet professionnel en équipe"
+      ],
+      "location": "Ecole O'Clock (certifiée grande école du numérique)"
+    },
+    {
+      "title": "Masseur-kinésithérapeute libéral",
+      "date": "Juillet 2016 – avril 2023",
+      "description": [
+        "Remplaçante à l'Ile de la Réunion pendant 6 mois post-diplôme",
+        "Assistante-collaboratrice en cabinet de groupe avec une activité mixte cabinet/domicile dans la région Grenobloise.",
+        "Spécialisation en Méthode Mckenzie de Diagnostic et Thérapie Mécanique",
+        "Maîtrise des logiciels de gestion de cabinet et de télétransmission : VEGA, Topaze, Kiné+4000, Doctolib",
+        "Tenue de comptabilité professionnelle."
+      ]
+    },
+    {
+      "title": "Diplôme d'état de Masseur-kinésithérapeute",
+      "date": "2013 – 2016",
+      "location": "Ecole de kinésithérapie du CHU de Grenoble"
+    },
+    {
+      "title": "PACES (Première Année Commune Aux études de Santé)",
+      "date": "2011 – 2013",
+      "location": "Université Grenobles Alpes - UFR Médecine"
+    }
+  ]
+}

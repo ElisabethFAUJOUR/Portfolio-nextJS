@@ -5,23 +5,21 @@ import Skills from '@/components/skills/Skills';
 import Projects from '@/components/projects/Projects';
 import Contact from '@/components/contact/Contact';
 
-interface PageProps {
+export default function Page({
+  params: { locale },
+}: {
   params: {
     locale: string;
   };
-}
-
-export default function Page({ params: { locale } }: PageProps) {
-  // Add Props {params: {locale}}
-
+}) {
   return (
     <>
-      <Home />
-      <About />
-      <Career />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Home locale={locale} />
+      <About locale={locale} />
+      <Career locale={locale} />
+      <Skills locale={locale} />
+      <Projects locale={locale} />
+      <Contact locale={locale} />
     </>
   );
 }
