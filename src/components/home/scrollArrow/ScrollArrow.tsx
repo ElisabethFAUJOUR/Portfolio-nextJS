@@ -1,12 +1,13 @@
 'use client';
 
-import useTranslation from 'next-translate/useTranslation';
 import { ChevronDoubleDown } from 'react-bootstrap-icons';
 import styles from './ScrollArrow.module.scss';
 
-function ScrollArrow() {
-  // t function for translation form the 'home' json file
-  const { t } = useTranslation('home');
+interface ScrollArrowProps {
+  ariaLabel: string;
+}
+
+function ScrollArrow({ ariaLabel }: ScrollArrowProps) {
   const handleClick = () => {
     const targetElement = document.getElementById('about');
     if (targetElement) {
@@ -16,7 +17,7 @@ function ScrollArrow() {
 
   return (
     <div className={styles.arrow}>
-      <a onClick={handleClick} aria-label={t('scrollArrowAriaLabel')}>
+      <a onClick={handleClick} aria-label={ariaLabel}>
         <ChevronDoubleDown />
       </a>
     </div>

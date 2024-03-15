@@ -26,3 +26,10 @@ export interface Project {
   imageSrc: string;
   tags: string[];
 }
+
+export interface Placeholder {
+  lastname: string;
+  firstname: string;
+  email: string;
+  phone: string;
+}

@@ -15,7 +15,7 @@ function Home() {
   const { t } = useTranslation('home');
   return (
     <FadeInSection customClass={styles.home} id="home">
-      <ScrollArrow />
+      <ScrollArrow ariaLabel={t('scrollArrowAriaLabel')} />
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.socials}>
