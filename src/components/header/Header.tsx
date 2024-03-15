@@ -2,11 +2,14 @@ import useTranslation from 'next-translate/useTranslation';
 import NavBar from './NavBar/NavBar';
 import Image from 'next/image';
 import LanguageSelect from './LanguageSelect/LanguageSelect';
+import { NavLinkType } from '@/@types';
 import styles from './Header.module.scss';
 
 function Header() {
   // t function for translation form the 'header' json file
   const { t } = useTranslation('header');
+  // Get all nav links from 'header' json file
+  const navLinks: NavLinkType[] = t('navLinks', {}, { returnObjects: true });
 
   return (
     <header className={styles.header}>
@@ -28,6 +31,7 @@ function Header() {
       <NavBar
         burgerAriaLabel={t('burgerMenuAriaLabel')}
         burgertitle={t('burgerMenuTitle')}
+        navLinks={navLinks}
       />
     </header>
   );
