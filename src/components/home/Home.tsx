@@ -50,7 +50,7 @@ async function Home({ locale }: { locale: string }) {
             </div>
             <a
               className={styles.resume}
-              href="/docs/Elisabeth_FAUJOUR_CV.pdf"
+              href={home.resumeLink}
               download="Elisabeth_FAUJOUR_CV.pdf"
               aria-label={home.resumeAriaLabel}
               title={home.resumeTitle}
