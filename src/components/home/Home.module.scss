@@ -48,7 +48,8 @@
       }
 
       .infos {
-        width: 500px;
+        max-width: 500px;
+        width: 100%;
 
         .name {
           padding-bottom: 1rem;
@@ -143,6 +144,24 @@
         .infos {
           .name {
             font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Responsive screen < 499px
+@media (max-width: 499px) {
+  .home {
+    .container {
+      .content {
+        .infos {
+          .name {
+            font-size: 1.6rem;
+          }
+          .job {
+            font-size: 0.9rem;
           }
         }
       }

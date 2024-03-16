@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   height: 5rem;
   padding: 0 2rem;
   background: $bgVioletDark;
@@ -20,6 +20,32 @@
       height: auto;
       .img {
         width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+//Responsive screen < 699px
+@media (max-width: 699px) {
+  .header {
+    padding: 0 1.2rem;
+    .wrapper {
+      gap: 1rem;
+      .logo {
+        width: 130px;
+        height: auto;
+      }
+    }
+  }
+}
+
+//Responsive screen < 499px
+@media (max-width: 499px) {
+  .header {
+    .wrapper {
+      .logo {
+        width: 120px;
         height: auto;
       }
     }
