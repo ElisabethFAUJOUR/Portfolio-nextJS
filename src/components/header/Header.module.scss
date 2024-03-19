@@ -7,9 +7,9 @@
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 100vw;
+  width: 100%;
   height: 5rem;
-  padding: 0 2rem;
+  padding: 0 3rem;
   background: $bgVioletDark;
   .wrapper {
     display: flex;
@@ -26,10 +26,17 @@
   }
 }
 
+//Responsive screen < 1199px
+@media (max-width: 1199px) {
+  .header {
+    padding: 0 2.5rem;
+  }
+}
+
 //Responsive screen < 699px
 @media (max-width: 699px) {
   .header {
-    padding: 0 1.2rem;
+    padding: 0 2rem;
     .wrapper {
       gap: 1rem;
       .logo {
@@ -43,6 +50,7 @@
 //Responsive screen < 499px
 @media (max-width: 499px) {
   .header {
+    padding: 0 1.2rem;
     .wrapper {
       .logo {
         width: 120px;

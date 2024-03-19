@@ -21,8 +21,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 3rem;
-      max-width: 520px;
+      max-width: 570px;
       width: 100%;
 
       .socials {
@@ -93,6 +92,7 @@
         flex-direction: column-reverse;
         max-width: none;
         width: 100%;
+        gap: 3rem;
         .socials {
           flex-direction: row;
         }
