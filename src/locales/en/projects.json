@@ -17,8 +17,8 @@
       ]
     },
     {
-      "title": "ToDo List Next.js",
-      "description": "Personal project ToDo List using Next.js and Prisma.",
+      "title": "ToDoList",
+      "description": "Personal project ToDoList using Next.js and Prisma.",
       "link": "https://github.com/ElisabethFjr/todoapp-nextjs",
       "imageSrc": "/images/todoapp.webp",
       "tags": ["Next.js", "Prisma", "postgreSQL", "Typescript", "SCSS"]
