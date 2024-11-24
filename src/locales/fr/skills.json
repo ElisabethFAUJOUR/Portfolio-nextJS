@@ -44,7 +44,9 @@
         { "name": "VS Code", "iconSrc": "/logos/icons8-visual-studio-50.webp" },
         { "name": "Git", "iconSrc": "/logos/icons8-git-50.webp" },
         { "name": "GitHub", "iconSrc": "/logos/icons8-github-64.webp" },
+        { "name": "GitLab", "iconSrc": "/logos/icons8-gitlab-50.webp" },
         { "name": "SCRUM", "iconSrc": "/logos/icons8-scrum-64.webp" },
+        { "name": "Jira", "iconSrc": "/logos/icons8-atlassian-50.webp" },
         { "name": "Trello", "iconSrc": "/logos/icons8-trello-50.webp" }
       ]
     },

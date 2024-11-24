@@ -3,8 +3,6 @@ import { nanoid } from 'nanoid';
 import FadeInDiv from '@/components/animations/FadeInDiv/FadeInDiv';
 import styles from './ProjectCard.module.scss';
 
-interface Tag {}
-
 interface ProjectCardProps {
   title: string;
   description: string;
