@@ -7,12 +7,15 @@
         { "name": "HTML5", "iconSrc": "/logos/icons8-html-50.webp" },
         { "name": "CSS3", "iconSrc": "/logos/icons8-css3-50.webp" },
         { "name": "SASS", "iconSrc": "/logos/icons8-sass-50.webp" },
+        {
+          "name": "Styled-component",
+          "iconSrc": "/logos/icons8-code-source-50.webp"
+        },
         { "name": "JavaScript", "iconSrc": "/logos/icons8-javascript-50.webp" },
         { "name": "Typescript", "iconSrc": "/logos/icons8-typescript-50.webp" },
         { "name": "React", "iconSrc": "/logos/icons8-react-48.webp" },
         { "name": "Next.js", "iconSrc": "/logos/icons8-nextjs-48.webp" },
-        { "name": "Redux", "iconSrc": "/logos/icons8-redux-50.webp" },
-        { "name": "Bootstrap", "iconSrc": "/logos/icons8-bootstrap-50.webp" }
+        { "name": "Redux", "iconSrc": "/logos/icons8-redux-50.webp" }
       ]
     },
     {
@@ -23,6 +26,10 @@
         { "name": "SQL", "iconSrc": "/logos/icons8-sql-50.webp" },
         { "name": "PostgreSQL", "iconSrc": "/logos/icons8-postgresql-50.webp" },
         { "name": "Sequelize", "iconSrc": "/logos/sequelize_icon_132004.webp" },
+        {
+          "name": "Prisma",
+          "iconSrc": "/logos/icons8-prisme-orme-50.webp"
+        },
         { "name": "API Rest", "iconSrc": "/logos/icons8-api-64.webp" },
         {
           "name": "Programmation Orientée Objet",
